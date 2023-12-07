@@ -1,0 +1,15 @@
+// FLUID TYPOGRAPHY
+html {
+  font-size: 10px;
+}
+@media screen and (min-width: 160px) {
+  html {
+    font-size: calc(10px + 6 * ((100vw - 160px) / 800));
+  }
+}
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 16px;
+  }
+}
+// END FLUID TYPOGRAPHY

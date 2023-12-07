@@ -1,0 +1,17 @@
+.pko_wp {
+
+    @import 'utilities/functions';
+
+    @import 'config/index';
+
+    @import 'utilities/mixins';
+
+    @import 'includes/index';
+
+    @import 'base/index';
+
+    @import 'helpers/index';
+
+    font-family: $font-primary;
+}
+

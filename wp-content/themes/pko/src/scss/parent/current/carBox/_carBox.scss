@@ -1,0 +1,433 @@
+.carBox {
+    border-radius: 16px;
+    border: solid 1px #e9e9f0;
+    overflow: hidden;
+    max-width: 286px;
+    margin: 0 16px 24px 0;
+    width: calc(33% - 16px);
+
+    &:hover {
+        .carBox_additionalIconsWrapper {
+            display: flex;
+        }
+
+        .carBox_arrow {
+          @media screen and (min-width: 620px) {
+            display: block !important;
+          }
+        }
+    }
+
+    @media screen and (max-width: 1023px) {
+        width: calc(50% - 18px);
+        max-width: inherit;
+    }
+
+    &--specialOffer {
+        width: calc(25% - 16px);
+
+        @media screen and (max-width: 1120px) {
+            width: calc(50% - 18px);
+            max-width: inherit;
+        }
+
+        @media screen and (max-width: 610px) {
+          margin-bottom: 55px;
+          //width: inherit;
+          width: calc(100% - 16px) !important;
+          max-width: inherit;
+          display: none;
+
+          &:first-of-type {
+            display: block;
+          }
+        }
+      
+        &.carBox--visible {
+          @media screen and (max-width: 610px) {
+            display: block;
+            //margin-right: 0;
+            width: inherit;
+            max-width: inherit;
+          }
+        }
+    }
+
+    &--listing {
+        margin: 0 0 24px 16px;
+
+        @media screen and (max-width: 800px) {
+            margin-left: 0;
+        }
+
+        @media screen and (max-width: 640px) {
+            width: 100%;
+        }
+    }
+
+    &_wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+
+        &--centered {
+          @media screen and (max-width: 610px) {
+            justify-content: center;
+          }
+        }
+
+      > .slick-dots {
+        left: calc(50% - 24px) !important;
+        bottom: 24px !important;
+      }
+
+      .slick-dots {
+        display: flex;
+        position: absolute;
+        left: calc(50% - 42px);
+        //bottom: 24px;
+        bottom: 8px;
+
+        li {
+          margin-right: 8px;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          &.slick-active {
+            .carBox_galleryPaginationItem, .carBox_sectionPaginationItem {
+              background-color: $topaz;
+            }
+          }
+        }
+      }
+    }
+
+    &_gallery {
+        position: relative;
+      //max-height: 209px; // prevent slick flashing onLoad
+      //overflow: hidden; // prevent slick flashing onLoad
+    }
+
+  &_slickGallery {
+    // może warto zastąpić to bądź powyższy zakomentowany sposób przez ukrywanie wszytskich slajdów prócz first-of-type?
+    //visibility: hidden;
+
+    .carBox_slickGalleryItem {
+      display: none;
+
+      &:first-of-type {
+        display: block;
+      }
+    }
+
+    &.slick-initialized {
+      visibility: visible;
+    }
+  }
+
+    &_img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+
+    &_iconsWrapper {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        display: flex;
+    }
+
+    &_additionalIconsWrapper {
+        display: none;
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+    }
+
+    &_icon {
+        width: 32px;
+        height: 32px;
+        background-color: $pale-grey;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        margin-right: 8px;
+      align-self: center;
+
+      img {
+        align-self: center;
+      }
+
+        &--additional {
+            margin-right: 0;
+            margin-left: 8px;
+        }
+    }
+
+    &_like {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      background-color: $ice;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      transition: 0.2s;
+      align-self: center;
+
+      .carBox_heartOutline {
+        display: block;
+        align-self: center;
+      }
+
+      .carBox_heartFull {
+        display: none;
+      }
+
+      &--liked, &:hover {
+        background-color: $topaz;
+
+        .carBox_heartOutline {
+          display: none;
+        }
+
+        .carBox_heartFull {
+          display: block;
+          align-self: center;
+        }
+      }
+    }
+
+    &_arrow {
+        display: none !important;
+        position: absolute;
+        top: calc(50% - 20px);
+        width: 48px;
+        height: 40px;
+        border-radius: 28px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        cursor: pointer;
+
+        &--left {
+            left: 16px;
+        }
+
+        &--right {
+            right: 16px;
+        }
+    }
+
+    &_galleryPagination, .slick-dots {
+        display: flex;
+        position: absolute;
+        left: calc(50% - 17px);
+        bottom: 17px;
+    }
+
+    &_galleryPaginationItem, &_sectionPaginationItem {
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $white;
+    }
+
+  &_sectionPaginationItem {
+    background-color: $light-sky-blue;
+  }
+
+    &_galleryPaginationDot {
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $white;
+
+        &--active {
+            background-color: $topaz;
+        }
+    }
+
+  .slick-dots li {
+    margin-right: 8px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .slick-active {
+    .carBox_galleryPaginationItem {
+      background-color: $topaz;
+    }
+  }
+
+    &_text {
+        display: block;
+        text-decoration: none;
+    }
+
+    &_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+    }
+
+    &_name {
+        @include main-600;
+        font-size: 17px;
+        line-height: 1.41;
+        color: $marine-blue;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &_year {
+        @include main-600;
+        font-size: 13px;
+        line-height: 1.23;
+        letter-spacing: 1.24px;
+        color: #335193;
+    }
+
+    &_details {
+        padding: 24px 24px 16px;
+    }
+
+    &_model {
+        display: block;
+        @include main-500;
+        font-size: 13px;
+        line-height: 1.23;
+        letter-spacing: -0.08px;
+        color: #80869b;
+        margin-bottom: 32px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &_detailsList {
+        display: flex;
+    }
+
+    &_detailsListItem {
+        display: flex;
+        align-items: center;
+        @include main-500;
+        font-size: 13px;
+        line-height: 1.23;
+        letter-spacing: -0.08px;
+        color: #80869b;
+        margin-right: 8px;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #cdd1d5;
+            margin-left: 8px;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &_offer {
+        display: flex;
+        box-sizing: border-box;
+        padding: 16px 0;
+        background-color: #fafafc;
+    }
+
+    &_offerPrice {
+        padding: 0 6px 0 24px;
+        border-right: 1px solid $pale-grey;
+        box-sizing: border-box;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_offerInstallment {
+        padding: 0 24px 0 6px;
+        box-sizing: border-box;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+      img {
+        align-self: center;
+      }
+    }
+
+    &_price {
+        @include main-600;
+        font-size: 20px;
+        line-height: 1.2;
+        color: $marine-blue;
+        margin-bottom: 2px;
+    }
+
+    &_priceInfo {
+        @include main-500;
+        font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: -0.08px;
+        color: #8797a3;
+    }
+
+    &_installment {
+        @include main-600;
+        font-size: 20px;
+        line-height: 1.2;
+        color: #139980;
+        margin-bottom: 2px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+  &_moreLink {
+    border-radius: 28px;
+    background-color: $topaz;
+    @include main-600;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: 0.16px;
+    color: $white;
+    border: none;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 16px 32px;
+
+    img {
+      margin-left: 16px;
+    }
+
+    @media screen and (max-width: 610px) {
+      display: inline-flex;
+    }
+  }
+}

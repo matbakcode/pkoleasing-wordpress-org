@@ -1,0 +1,124 @@
+.bottomMenu {
+    width: 100%;
+    padding: 0 16px;
+    margin-left: -16px;
+    border-top: 1px solid $pale-grey;
+
+    &_wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 84px 0 77px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+
+        @media screen and (max-width: 1120px) {
+            padding: 34px 0 30px;
+        }
+    }
+
+  &_logoWrapper {
+    margin-bottom: 24px;
+    
+    @media screen and (max-width: 689px) {
+      display: none;
+    }
+  }
+
+    &_apla1 {
+        display: none;
+        position: absolute;
+        bottom: -11px;
+        right: 48px;
+        width: 96px;
+        height: 22px;
+        border-radius: 12px;
+        background-image: linear-gradient(to right, rgba(237, 238, 241, 0) 0%, $pale-grey 98%);
+
+        &:after {
+            content: '';
+            width: 48px;
+            height: 22px;
+            border-radius: 12px;
+            background-color: $pale-grey;
+            float: right;
+        }
+
+        @media screen and (max-width: 689px) {
+            display: block;
+        }
+    }
+
+    &_menuContainer {
+        display: flex;
+        flex-basis: 800px;
+        flex-wrap: wrap;
+    }
+
+    &_smallColumn {
+        flex-basis: 200px;
+        padding: 0 8px;
+        box-sizing: border-box;
+
+      @media screen and (max-width: 689px) {
+        flex-basis: 50%;
+      }
+    }
+
+    &_largeColumn {
+        padding: 0 8px;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 689px) {
+            width: 100%;
+            padding-top: 22px;
+        }
+    }
+
+    &_list {
+        display: flex;
+    }
+
+    &_logoWrapper {
+        @media screen and (max-width: 1023px) {
+            display: none;
+        }
+    }
+
+    &_ImgWrapper {
+        display: flex;
+        justify-content: center;
+        width: 56px;
+        height: 48px;
+        border-radius: 24px;
+        border: solid 1px $pale-grey;
+        margin-right: 16px;
+    }
+
+    &_header {
+        @include main-600;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $marine-blue;
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 689px) {
+            margin-bottom: 21px;
+        }
+    }
+
+    &_listItemLink {
+        @include main-500;
+        font-size: 15px;
+        line-height: 1.43;
+        color: #828599;
+        display: inline-block;
+        margin-bottom: 16px;
+        text-decoration: none;
+
+        @media screen and (max-width: 689px) {
+            margin-bottom: 6px;
+        }
+    }
+}

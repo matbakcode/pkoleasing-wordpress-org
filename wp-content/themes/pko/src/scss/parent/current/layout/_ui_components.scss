@@ -1,0 +1,248 @@
+/*iphone switch*/
+.form-switch {
+    display: inline-block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    //width: 62px;
+    //height: 24px;
+    @include main-500;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: 0.24px;
+    color: $marine-blue;
+    margin-right: 40px;
+
+    i {
+        position: relative;
+        display: inline-block;
+        margin-right: 16px;
+        width: 46px;
+        height: 26px;
+        background-color: #e6e6e6;
+        border-radius: 23px;
+        vertical-align: text-bottom;
+        transition: all 0.3s linear;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 42px;
+            height: 22px;
+            background-color: #fff;
+            border-radius: 11px;
+            transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+            transition: all 0.25s linear;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 22px;
+            height: 22px;
+            background-color: #fff;
+            border-radius: 11px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+            transform: translate3d(2px, 2px, 0);
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    &:active {
+        i::after {
+            width: 28px;
+            transform: translate3d(2px, 2px, 0);
+        }
+
+        input:checked + i::after {
+            transform: translate3d(16px, 2px, 0);
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked + i {
+            background-color: $topaz;
+
+            &::before {
+                transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+            }
+
+            &::after {
+                transform: translate3d(22px, 2px, 0);
+            }
+        }
+    }
+}
+
+.form-switch-small {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    @include main-600;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    @include main-500;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: 0.24px;
+    margin-right: 40px;
+    span {
+      color: #828599;
+    }
+
+    i {
+        position: relative;
+        display: inline-block;
+        margin-right: 16px;
+        width: 32px;
+        height: 24px;
+        background-color: $light-blue-grey;
+        border-radius: 16px;
+        vertical-align: text-bottom;
+        transition: all 0.3s linear;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 32px;
+            height: 24px;
+            background-color: $light-blue-grey;
+            border-radius: 16px;
+
+            transition: all 0.25s linear;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border-radius: 16px;
+            transform: translate3d(4px, 4px, 0);
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    &:active {
+        i::after {
+            width: 16px;
+            transform: translate3d(4px, 4px, 0);
+        }
+
+        input:checked + i::after {
+            transform: translate3d(13px, 4px, 0);
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked + i {
+            background-color: $topaz;
+
+            &::before {
+                transform: translate3d(13px, 4px, 0) scale3d(0, 0, 0);
+            }
+
+            &::after {
+                transform: translate3d(13px, 4px, 0);
+            }
+        }
+      &:checked ~ span {
+        color: $marine-blue;
+      }
+    }
+}
+
+.infoTooltip {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('../images/info-circle.svg') no-repeat center;
+    cursor: pointer;
+}
+
+.radio__button {
+    display: flex;
+
+    &__item {
+        position: relative;
+        input[type=radio] {
+            display: none;
+            margin: 10px;
+            position: absolute;
+            left: 0;
+            top:0;
+            right: 0;
+            bottom: 0;
+        }
+
+        input[type=radio] + label {
+            @include main-500;
+            padding: 10px 14px;
+            font-size: 14px;
+            line-height: 1.43;
+            letter-spacing: normal;
+            text-align: center;
+            color: $marine-blue;
+            display: block;
+            cursor: pointer;
+            border: solid 1px $light-periwinkle;
+            border-left: none;
+        }
+        &:first-child {
+            input[type=radio] + label {
+                border-left: 1px solid $light-periwinkle;
+                border-radius: 8px 0 0 8px;
+            }
+        }
+
+        &:last-child {
+            input[type=radio] + label {
+                border-radius: 0 8px 8px 0;
+            }
+        }
+        input[type=radio]:checked + label {
+            background-color: $marine-blue;
+            color: $white;
+            border-color: $marine-blue;
+        }
+    }
+}
+
+%subheader {
+  display: inline-block;
+  @include main-bold;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $topaz;
+}
+.badge {
+    @include main-600;
+    font-size: 9px;
+    color: #01237d;
+    line-height: 1.78;
+    border-radius: 16px;
+    background-color: #ebeef5;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    display: block;
+    box-sizing: content-box;
+    &__green {
+        background-color: $ice-blue;
+    }
+}

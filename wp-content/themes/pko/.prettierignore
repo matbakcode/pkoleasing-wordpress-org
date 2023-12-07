@@ -1,0 +1,8 @@
+unaweza/static/dist/**
+.webpack-stats.json
+staticdir/
+mediadir/
+
+# ignore hidden files (mostly because of Heroku)
+.*
+*.html

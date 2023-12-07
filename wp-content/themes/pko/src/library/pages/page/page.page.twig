@@ -1,0 +1,24 @@
+{% extends "layouts/base/base.layout.twig" %}
+
+
+{% block content %}
+    {% include 'blocks/BarPoints/BarPoints.block.twig' %}
+
+    {% include 'blocks/Hero/Hero.block.twig' %}
+
+    {% include 'blocks/Cards/Cards.block.twig' %}
+
+    {% include 'blocks/Half/Half.block.twig' %}
+
+
+    <div class="container">
+            {% for post in posts %}
+                {{ post.content }}
+            {% endfor %}
+    </div>
+
+
+
+
+{% endblock %}
+

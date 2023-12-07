@@ -1,0 +1,668 @@
+.formGroup {
+  margin-bottom: 24px;
+  width: 100%;
+
+  &--loginSection {
+    margin-bottom: 12px;
+
+    &:nth-of-type(2) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &--formSection {
+    width: 50%;
+    max-width: 287px;
+
+    @media screen and (max-width: 620px) {
+      width: 100%;
+      max-width: inherit;
+    }
+  }
+
+  &--marginRight {
+    margin-right: 16px;
+
+    @media screen and (max-width: 620px) {
+      margin-right: 0;
+    }
+  }
+
+  &--marginRightSmall {
+    margin-right: 8px;
+  }
+
+  &--small {
+    max-width: 186px;
+
+    @media screen and (max-width: 620px) {
+      max-width: calc(100% - 101px);
+    }
+  }
+
+  &--xSmall {
+    max-width: 93px;
+  }
+
+  &--noLabel {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &--loginSectionMoreGap {
+    margin-bottom: 16px;
+  }
+
+  &_asterisk {
+    color: #d73039;
+  }
+
+  label, .label {
+    @include main-500;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: $steel;
+    display: block;
+    margin-bottom: 12px;
+
+    a {
+      color: $topaz;
+    }
+
+    sup {
+      color: #d73039;
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    &.formGroup_label--loginSection {
+        line-height: 1.43;
+        color: #828599;
+        margin-bottom: 8px;
+    }
+  }
+
+  .small {
+    font-size: 12px;
+    line-height: 1.33;
+  }
+
+  input.formControl {
+    width: calc(100% - 22px);
+    border-radius: 8px;
+    border: solid 1px $light-sky-blue;
+    background-color: $white;
+    @include main-500;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #a1a1b5;
+    padding: 11px;
+    font-size: 15px;
+
+    &::placeholder {
+      color: $marine-blue;
+      opacity: 1;
+    }
+
+    &--loginSection {
+      height: 48px;
+      border-radius: 8px;
+      border: solid 1px $light-periwinkle;
+      background-color: $white;
+      box-sizing: border-box;
+      width: 100%;
+      text-indent: 16px;
+      color: $marine-blue;
+    }
+  }
+
+        //&--formSection {
+        //    height: 48px;
+        //    border-radius: 8px;
+        //    border: solid 1px $light-periwinkle;
+        //    background-color: $white;
+        //    box-sizing: border-box;
+        //    width: 50%;
+        //    max-width: 287px;
+        //    text-indent: 16px;
+        //    color: $marine-blue;
+        //}
+    span.formSelect {
+    position: relative;
+    display: block;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      margin-top: -8px;
+      right: 11px;
+      z-index: 2;
+      display: block;
+      line-height: 0.496em;
+      color: #333;
+      pointer-events: none;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/down.svg');
+    }
+
+    select {
+      width: 100%;
+      height: 40px;
+      border-radius: 8px;
+      border: solid 1px $light-periwinkle;
+      @include main-500;
+      appearance: none;
+      font-size: 14px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.14;
+      letter-spacing: normal;
+      color: $marine-blue;
+      padding: 11px 22px 11px 8px;
+    }
+
+    &--listing select {
+      @media screen and (max-width: 800px) {
+        height: 48px;
+      }
+    }
+  }
+}
+
+.formChecbox {
+  display: block;
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: 0.16px;
+  color: #828599;
+  user-select: none;
+  @include main-500;
+
+    &--loginSection {
+        font-size: 14px;
+        line-height: 1.43;
+        color: #828599;
+        margin-bottom: 16px;
+    }
+
+    &--standardBig {
+        font-size: 14px;
+        line-height: 1.43;
+        color: #828599;
+        margin-bottom: 24px;
+    }
+
+    &--standardSmall {
+        font-size: 12px;
+        line-height: 1.33;
+        color: #828599;
+        margin-bottom: 18px;
+    }
+
+    &--intend {
+        margin-left: 32px;
+
+        @media screen and (max-width: 620px) {
+            margin-left: 16px;
+        }
+    }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked {
+      & ~ {
+        .checkmark {
+          background-color: $topaz;
+          border-color: $topaz;
+
+          &:after {
+            display: block;
+          }
+        }
+
+        span.label {
+          color: $marine-blue;;
+        }
+      }
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: solid 1px $light-blue-grey;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 7px;
+      top: 3px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:hover {
+    input {
+      & ~ {
+        .checkmark {
+          border-color: #98a7c8;
+        }
+
+        span.label {
+          color: $marine-blue;;
+        }
+      }
+    }
+  }
+
+  label {
+
+  }
+
+  small {
+
+  }
+}
+
+.formRadio {
+  display: block;
+  position: relative;
+  padding-left: 36px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: 0.16px;
+  color: #828599;
+  user-select: none;
+  @include main-500;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked {
+      & ~ {
+        .checkmark {
+          background-color: $topaz;
+          border-color: $topaz;
+
+          &:after {
+            display: block;
+          }
+        }
+
+        span.label {
+          color: $marine-blue;
+        }
+      }
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: solid 1px $light-periwinkle;
+    background-color: $white;
+    border-radius: 50%;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 6px;
+      top: 6px;
+      width: 8px;
+      height: 8px;
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+
+  &:hover {
+    input {
+      & ~ {
+        .checkmark {
+          border-color: #98a7c8;
+        }
+
+        span.label {
+          color: $marine-blue;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  @include main-500;
+  display: inline-block;
+  line-height: 1.47;
+  font-size: 15px;
+  padding: 17px 32px;
+  border-radius: 28px;
+  border: solid 1px transparent;
+  text-decoration: none;
+  cursor: pointer;
+
+  &__ghost {
+    color: $marine-blue;
+    background-color: $white;
+    border-color: $light-periwinkle;
+
+    &:hover {
+      border-color: #98a7c8;
+    }
+  }
+
+  &__regular {
+    color: $white;
+    background-color: $topaz;
+    border-color: $topaz;
+
+    &:hover {
+      border-color: #17b395;
+      background-color: #17b395;
+    }
+  }
+
+  &__wnioskuj {
+    max-width: 267px;
+    flex-grow: 2;
+    margin-left: 16px;
+    position: relative;
+    @media only screen and (max-width: 768px) {
+      max-width: max-content;
+      white-space: nowrap;
+    }
+
+    &:before {
+      content: '';
+      background: url('../images/oferta/arrow-right.svg') 0 center no-repeat;
+      height: 100%;
+      width: 16px;
+      position: absolute;
+      right: 32px;
+      top: 0;
+      @media only screen and (max-width: 768px) {
+        background: none;
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+
+  &__more {
+    padding-right: 52px;
+    position: relative;
+
+    &:before {
+      content: '';
+      background: url('../images/oferta/chevron-down-green.svg') 0 center no-repeat;
+      height: 100%;
+      width: 16px;
+      position: absolute;
+      right: 24px;
+      top: 0;
+    }
+
+    &--active {
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__call {
+    padding: 13px 47px 13px 52px;
+    height: 48px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 0;
+      width: 16px;
+      height: 48px;
+      background: url('../icons/16/phone.svg') center no-repeat;
+    }
+  }
+}
+
+input[type="button"]:disabled {
+  background-color: #e9e9f0;
+  color: #828599;
+  border-color: #e9e9f0;
+  pointer-events: none;
+}
+
+.infoTooltipMobile {
+  position: relative;
+  width: 48px;
+  height: 40px;
+  border-radius: 28px;
+  border: solid 1px $light-periwinkle;
+  background-color: $white;
+}
+
+.label {
+    &--small {
+        @include main-500;
+        font-size: 12px;
+        line-height: 1.33;
+        color: #828599;
+    }
+
+    &_link {
+        color: $topaz;
+    }
+}
+
+.formElements {
+  margin-bottom: 24px;
+  margin-right: 17px;
+  width: 100%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  label {
+    @include main-500;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #828599;
+    display: flex;
+    width: auto;
+
+    sup {
+      color: #d73039;
+      display: block;
+      margin-left: 3px;
+    }
+
+    .word__counter {
+      margin-left: auto;
+      font-size: 12px;
+      color: #828599;
+      line-height: 1.33;
+    }
+  }
+
+  input:not([type=checkbox]):not([type=radio]) {
+    border: solid 1px $light-periwinkle;
+    background-color: $white;
+    border-radius: 8px;
+    padding: 13px 16px;
+    @include main-500;
+    font-size: 15px;
+    line-height: 1.47;
+    box-sizing: border-box;
+    color: #828599;
+    caret-color: $topaz;
+    width: 100%;
+
+    &:hover {
+      border-color: #98a7c8;
+      color: $marine-blue;
+    }
+
+    &:focus {
+      border-color: #335193;
+      color: $marine-blue;
+    }
+
+    &:valid {
+      color: $marine-blue;
+    }
+  }
+
+  textarea {
+    height: 136px;
+    padding: 13px 16px;
+    border-radius: 8px;
+    border: solid 1px $light-periwinkle;
+    @include main-500;
+    font-size: 15px;
+    line-height: 1.47;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: #828599;
+    caret-color: $topaz;
+    width: 100%;
+
+    &:hover {
+      border-color: #98a7c8;
+      color: $marine-blue;
+    }
+
+    &:focus {
+      border-color: #335193;
+      color: $marine-blue;
+    }
+
+    &:valid {
+      color: $marine-blue;
+    }
+  }
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+.countElements {
+  margin-bottom: 24px;
+  margin-right: 17px;
+  width: 100%;
+  label {
+    @include main-500;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #828599;
+    display: flex;
+    width: auto;
+  }
+  sup {
+    color: #d73039;
+    display: block;
+    margin-left: 3px;
+  }
+  .handle-counter {
+    border-radius: 8px;
+    border: solid 1px $light-periwinkle;
+    background-color: $white;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    button {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background-color: $topaz;
+      border: 0;
+      font-size: 0;
+      position: relative;
+      cursor: pointer;
+      &:before {
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+      .counter-minus {
+        &:before {
+          background: url('../icons/16/minus.svg') center no-repeat;
+          filter: brightness(100) grayscale(100);
+        }
+        &:disabled {
+          background-color: #fafafc;
+          &:before {
+            background: url('../icons/16/minus.svg') center no-repeat;
+            filter: brightness(5) grayscale(100);
+          }
+        }
+      }
+      .counter-plus {
+        &:before {
+          background: url('../icons/16/plus.svg') center no-repeat;
+          filter: brightness(100) grayscale(100);
+        }
+        &:disabled {
+          background-color: #fafafc;
+          &:before {
+            filter: brightness(5) grayscale(100);
+          }
+        }
+      }
+     .countInput {
+       border: none;
+       text-align: center;
+       @include main-500;
+       font-size: 15px;
+       line-height: 1.47;
+       color: $marine-blue;
+       pointer-events: none;
+       max-width: 50px;
+     }
+    }
+  }

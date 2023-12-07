@@ -1,0 +1,20 @@
+env:
+  browser: true
+  es6: true
+extends:
+  - eslint:recommended
+  - prettier
+parserOptions:
+  sourceType: module
+  ecmaVersion: 2017
+rules:
+  constructor-super: warn
+  generator-star-spacing: warn
+  no-trailing-spaces: warn
+  no-this-before-super: warn
+  no-var: error
+  object-shorthand: warn
+  prefer-const: warn
+  no-undef: error
+  eqeqeq: [error, smart]  # require === with some exceptions
+  comma-dangle: [error, always-multiline]

@@ -1,0 +1,52 @@
+.mainFilters {
+  color: white;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  @media screen and (max-width: 680px) {
+    flex-direction: column;
+  }
+
+  &_wrapper {
+    width: 100%;
+    max-width: 1596px;
+    margin: 0 auto;
+    padding: 24px 32px 0 0;
+    box-sizing: border-box;
+    z-index: 3;
+    background-color: $white;
+    position: fixed;
+
+    @media screen and (max-width: 680px) {
+      padding-bottom: 16px;
+    }
+  }
+}
+
+.is-firm {
+  width: 208px;
+  border-radius: 8px;
+  border: solid 1px #eaeaf1;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 680px) {
+    order: 1;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &_label {
+      color: $color5;
+      @include main-500;
+      font-size: 1.5rem;
+  }
+}

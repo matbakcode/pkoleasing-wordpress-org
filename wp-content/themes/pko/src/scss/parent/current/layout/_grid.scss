@@ -1,0 +1,73 @@
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+@mixin colStyle {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 1;
+    margin: 0 8px;
+}
+.col-auto {
+    @include colStyle;
+}
+.col-1 {
+    max-width: calc(100% / 12);
+    @include colStyle;
+}
+
+.col-2 {
+    max-width: calc(100% / 12 * 2);
+    @include colStyle;
+}
+
+.col-3 {
+    max-width: calc(100% / 12 * 3);
+    @include colStyle;
+}
+
+.col-4 {
+    max-width: calc(100% / 12 * 4);
+    @include colStyle;
+}
+
+.col-5 {
+    max-width: calc(100% / 12 * 5);
+    @include colStyle;
+}
+
+.col-6 {
+    max-width: calc(100% / 2);
+    @include colStyle;
+}
+.col-7 {
+    @include colStyle;
+    max-width: calc(100% / 12 * 7);
+};
+.col-8 {
+    @include colStyle;
+    max-width: calc(100% / 12 * 8);
+};
+.col-9 {
+    @include colStyle;
+    max-width: calc(100% / 12 * 9);
+};
+.col-10 {
+    @include colStyle;
+    max-width: calc(100% / 12 * 10);
+};
+.col-11 {
+    @include colStyle;
+    max-width: calc(100% / 12 * 11);
+};
+.col-12 {
+    @include colStyle;
+    max-width: 100%;
+};

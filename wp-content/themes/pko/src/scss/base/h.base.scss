@@ -1,0 +1,51 @@
+h1,
+.h1 {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0;
+    font-weight: $font-weight-semi;
+    margin: 0 0 24px 0;
+
+    @include media-breakpoint-up(md) {
+        font-size: 38px;
+        line-height: 46px;
+        letter-spacing: -0.2;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 56px;
+        line-height: 64px;
+        letter-spacing: -0.2;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: $font-weight-semi;
+    margin: 0 0 24px 0;
+
+    @include media-breakpoint-up(md) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+h3,
+.h3 {
+    //@include font-secondary();
+}
+
+h4,
+.h4 {
+    //@include font-secondary();
+}
+
+h5,
+.h5 {
+    //@include font-secondary();
+    font-size: 17px;
+    font-weight: $font-weight-medium;
+    line-height: 24px;
+}

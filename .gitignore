@@ -1,0 +1,39 @@
+
+!.gitignore
+!/docker-compose.yml
+!/README.md
+!/docker
+
+# cli
+!/wp-cli-storm.php
+!/wp-cli-storm.json
+
+#
+!/readme.md
+!/package.json
+
+# orther files
+#!/crm
+#!/delete
+#!/download
+#!/imgs
+#!/signatures
+#!/vb-email
+/node_modules
+/.idea/
+/wp-config.php
+
+# Ignore elements of your themes
+/wp-content/themes/*
+!/wp-content/themes/pko
+/wp-content/themes/pko/node_modules
+/wp-content/themes/pko/vendor
+/wp-content/themes/pko/static
+/wp-content/themes/pko/src/js/temp/
+/wp-content/themes/pko/app/temp
+!/install.sh
+!/generate.sh
+!/.env.default
+!/config/
+!/theme.sh
+

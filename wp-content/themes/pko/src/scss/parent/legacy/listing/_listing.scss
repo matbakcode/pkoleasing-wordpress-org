@@ -1,0 +1,315 @@
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main {
+  width: 75%;
+  float: left;
+}
+
+.main-filters {
+  width: 100%;
+
+  &_basic-option {
+    width: 25%;
+    border-right: 1px solid $color1;
+    text-align: center;
+
+    &:nth-of-type(2) {
+      .main-filters_basic-option-link span:before,
+      .main-filters_basic-option-link.main-filters_basic-option-link--disabled:hover span:before {
+        background-image: url('../assets/images/listing-filters/Wallet-coin/Wallet-coin-inactive.svg');
+      }
+
+      .main-filters_basic-option-link.main-filters_basic-option-link--active span:before,
+      .main-filters_basic-option-link:hover span:before {
+        background-image: url('../assets/images/listing-filters/Wallet-coin/Wallet-coin-active.svg');
+      }
+    }
+
+    &:nth-of-type(3) {
+      .main-filters_basic-option-link span:before,
+      .main-filters_basic-option-link.main-filters_basic-option-link--disabled:hover span:before {
+        background-image: url('../assets/images/listing-filters/Rent/Rent-inactive.svg');
+      }
+
+      .main-filters_basic-option-link.main-filters_basic-option-link--active span:before,
+      .main-filters_basic-option-link:hover span:before {
+        background-image: url('../assets/images/listing-filters/Rent/Rent-active.svg');
+      }
+    }
+
+    &:nth-of-type(4) {
+      .main-filters_basic-option-link span:before,
+      .main-filters_basic-option-link.main-filters_basic-option-link--disabled:hover span:before {
+        background-image: url('../assets/images/listing-filters/Leasing/Leasing-inactive.svg');
+      }
+
+      .main-filters_basic-option-link.main-filters_basic-option-link--active span:before,
+      .main-filters_basic-option-link:hover span:before {
+        background-image: url('../assets/images/listing-filters/Leasing/Leasing-active.svg');
+      }
+    }
+  }
+
+  &_basic-option-link {
+    text-decoration: none;
+    @include lato-bold;
+    font-size: 1.5rem;
+    color: $color5;
+    padding: 16px;
+    display: block;
+    position: relative;
+
+    span {
+      position: relative;
+
+      @media screen and (min-width: 1023px) {
+        &:before {
+          content: '';
+          width: 24px;
+          height: 24px;
+          background-position: center;
+          position: absolute;
+          left: -41px;
+          top: calc(50% - 12px);
+        }
+      }
+    }
+
+    &--active {
+      color: $color6;
+      background-color: $color4;
+    }
+
+    &:hover {
+      transition-duration: 0.2s;
+      color: $color6;
+      background-color: $color4;
+    }
+  }
+
+  &_listing-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 800px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &_listing-option-group {
+    display: flex;
+  }
+
+  &_header {
+    @include lato-bold;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: $color5;
+    padding: 30px;
+  }
+
+  &_view-options-list {
+    background-color: gold;
+    display: flex;
+    margin-right: 16px;
+  }
+
+  &_view-option {
+    border-right: 1px solid $color1;
+    text-align: center;
+  }
+
+  &_view-option-link {
+    text-decoration: none;
+    @include lato-bold;
+    font-size: 1rem;
+    color: $color6;
+    background-color: $color2;
+    padding: 16px;
+    display: block;
+
+    &--active {
+      background-color: $color4;
+    }
+
+    &:hover {
+      transition-duration: 0.2s;
+      background-color: $color4;
+    }
+  }
+
+  &_select {
+    @include lato-bold;
+    font-size: 1rem;
+    color: $color5;
+  }
+}
+
+.listing-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+}
+
+.column {
+  @include lato-normal;
+  width: calc(33% - 30px);
+  border: 1px solid $color1;
+  margin: 0 15px 15px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &_image-wrapper {
+    position: relative;
+  }
+
+  &_image {
+    width: 100%;
+    height: auto;
+  }
+
+  &_promo {
+    background-color: $color2;
+    color: $color6;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
+  &_like {
+    background-color: $color4;
+    color: $color6;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  &_link {
+    text-decoration: none;
+  }
+
+  &_text-wrapper {
+    padding: 16px;
+    float: left;
+  }
+
+  &_text-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &_text-name {
+    color: $color5;
+    @include lato-bold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  &_text-year {
+    color: $color5;
+    @include lato-normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  &_text-info-wrapper {
+    margin-bottom: 16px;
+
+    span, li {
+      color: $color5;
+      @include lato-normal;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 8px;
+
+      &:after {
+        content: '';
+        border-right: 1px solid $color5;
+        margin-left: 8px;
+      }
+
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &_price-wrapper {
+    border-top: 1px solid $color1;
+    float: left;
+  }
+
+  &_price-whole {
+    width: 50%;
+    float: left;
+    border-right: 1px solid $color1;
+    box-sizing: border-box;
+  }
+
+  &_price-whole-main {
+    color: $color5;
+    @include lato-normal;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    float: left;
+    width: 100%;
+    margin: 16px 16px 8px 0px;
+  }
+
+  &_price-whole-sub {
+    color: $color5;
+    @include lato-normal;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    float: left;
+    width: 100%;
+    margin: 0 16px 16px 0px;
+  }
+
+  &_price-installment {
+    width: 50%;
+    float: left;
+  }
+
+  &_price-installment-main {
+    color: $color5;
+    @include lato-normal;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    float: left;
+    width: 100%;
+    margin: 16px 16px 8px;
+  }
+
+  &_price-installment-sub {
+    color: $color5;
+    @include lato-normal;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    float: left;
+    width: 100%;
+    margin: 0 16px 16px;
+  }
+}

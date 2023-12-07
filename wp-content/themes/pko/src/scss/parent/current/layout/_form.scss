@@ -1,0 +1,55 @@
+.form {
+  &_wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_column {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  &_header {
+    @include main-600;
+    font-size: 28px;
+    line-height: 1.29;
+    color: $marine-blue;
+    margin-bottom: 24px;
+  }
+
+  &_text {
+    @include main-500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #828599;
+    margin-bottom: 40px;
+  }
+
+  &_formGroupWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &--small {
+      width: 50%;
+      max-width: 287px;
+
+      @media screen and (max-width: 620px) {
+        width: 100%;
+        max-width: inherit;
+      }
+    }
+
+    &--noWrap {
+      flex-wrap: nowrap;
+
+      @media screen and (max-width: 620px) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

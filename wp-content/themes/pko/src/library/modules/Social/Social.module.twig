@@ -1,0 +1,34 @@
+<div class="m-Social">
+    {% if options.wcd_linkedin %}
+        <a href="{{ options.wcd_linkedin }}" class="m-Social__link">
+            {% include "modules/Icon/Icon.module.twig" with {
+                icon: 'linkedin'
+            } %}
+        </a>
+    {% endif %}
+
+    {% if options.wcd_youtube %}
+        <a href="{{ options.wcd_youtube }}" class="m-Social__link" target="_blank">
+            {% include "modules/Icon/Icon.module.twig" with {
+                icon: 'youtube'
+            } %}
+        </a>
+    {% endif %}
+
+    {% if options.wcd_google %}
+        <a href="{{ options.wcd_google }}" class="m-Social__link" target="_blank">
+            {% include "modules/Icon/Icon.module.twig" with {
+                icon: 'pin'
+            } %}
+        </a>
+    {% endif %}
+
+    {% if options.wcd_facebook %}
+    <a href="{{ options.wcd_facebook }}" class="m-Social__link" target="_blank">
+        {% include "modules/Icon/Icon.module.twig" with {
+            icon: 'facebook'
+        } %}
+    </a>
+    {% endif %}
+
+</div>

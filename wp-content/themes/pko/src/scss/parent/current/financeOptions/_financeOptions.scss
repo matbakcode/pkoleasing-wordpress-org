@@ -1,0 +1,212 @@
+.financeOptions {
+    max-width: 1200px;
+    margin: 0 auto 172px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1120px) {
+        margin-bottom: 56px;
+    }
+
+    &_headerWrapper {
+        text-align: center;
+        flex-basis: 100%;
+        margin-bottom: 68px;
+
+        @media screen and (max-width: 1120px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &_subheader {
+      @extend %subheader;
+        margin-bottom: 16px;
+    }
+
+    &_header {
+        @include main-600;
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: -0.16px;
+        color: $marine-blue;
+        margin-bottom: 24px;
+
+        @media (max-width: 610px) {
+            font-size: 28px;
+            line-height: 1.14;
+            letter-spacing: -0.11px;
+        }
+    }
+
+    &_text {
+        @include main-500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #80869b;
+    }
+
+    &_columnsWrapper {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &_apla1 {
+        display: none;
+        position: absolute;
+        top: -12px;
+        left: 32px;
+        width: 96px;
+        height: 24px;
+        border-radius: 12px;
+        background-image: linear-gradient(to right, rgba(237, 238, 241, 0) 0%, $pale-grey 98%);
+
+        &:after {
+            content: '';
+            width: 48px;
+            height: 24px;
+            border-radius: 12px;
+            background-color: $pale-grey;
+            float: left;
+        }
+    }
+
+    &_apla2 {
+        display: none;
+        position: absolute;
+        right: 32px;
+        bottom: -12px;
+        width: 96px;
+        height: 24px;
+        border-radius: 12px;
+        background-image: linear-gradient(to right, rgba(237, 238, 241, 0) 0%, $pale-grey 98%);
+
+        &:after {
+            content: '';
+            width: 48px;
+            height: 24px;
+            border-radius: 12px;
+            background-color: $pale-grey;
+            float: right;
+        }
+    }
+
+    &_column {
+        position: relative;
+        display: flex;
+        max-width: 390px;
+        width: 33%;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 16px;
+        background-color: $white;
+        padding: 64px 45px 80px;
+        text-decoration: none;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 1120px) {
+            padding: 25px;
+        }
+
+        @media screen and (max-width: 1120px) {
+            width: 50%;
+        }
+
+        @media screen and (max-width: 610px) {
+            width: 360px;
+            border-bottom: 1px solid $pale-grey;
+            border-radius: 0;
+        }
+
+        @media screen and (max-width: 390px) {
+            width: 300px;
+            border-bottom: 1px solid $pale-grey;
+            border-radius: 0;
+        }
+
+        &:hover {
+            box-shadow: 0 24px 88px 4px rgba(37, 39, 42, 0.04);
+
+            .financeOptions_apla1, .financeOptions_apla2 {
+                display: block;
+            }
+
+            .financeOptions_imgCtaDark {
+                display: inline-block;
+            }
+
+            .financeOptions_imgCtaLight {
+                display: none;
+            }
+        }
+    }
+
+    &_imgWrapper {
+        width: 88px;
+        height: 72px;
+        border-radius: 36px;
+        background-color: #fafafc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 610px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &_columnHeader {
+        @include main-600;
+        font-size: 20px;
+        line-height: 1.6;
+        text-align: center;
+        color: $marine-blue;
+        margin-bottom: 16px;
+
+        @media screen and (max-width: 610px) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &_columnText {
+        @include main-500;
+        width: 300px;
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: center;
+        color: #80869b;
+        margin-bottom: 80px;
+
+        @media screen and (max-width: 610px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &_columnCta {
+        @include main-600;
+        font-size: 15px;
+        line-height: 1.6;
+        letter-spacing: 0.16px;
+        color: $topaz;
+        justify-content: center;
+        display: flex;
+    }
+
+    &_imgCtaDark {
+        padding: 6px;
+        background-color: $topaz;
+        margin-left: 16px;
+        border-radius: 50%;
+        display: none;
+    }
+
+    &_imgCtaLight {
+        padding: 6px;
+        background-color: $ice-blue;
+        margin-left: 16px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-prettier"
+  ],
+  "ignoreFiles": [
+    "src/fonts/**"
+  ],
+  "rules": {
+      "indentation": 4
+  }
+}

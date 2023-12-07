@@ -1,0 +1,8 @@
+<?php
+
+$config['cpt'] = [
+//    'testimonial' => [
+//
+//    ],
+
+];

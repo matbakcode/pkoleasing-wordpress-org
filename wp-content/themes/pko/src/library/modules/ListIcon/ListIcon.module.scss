@@ -1,0 +1,33 @@
+.m-ListIcon {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.m-ListIcon__region {
+
+}
+
+.m-ListIcon-Single {
+    display: flex;
+
+}
+
+.m-ListIcon-Single__icon-wrapper {
+    width: 56px;
+    height: 48px;
+    border-radius: $border-radius-lg;
+    flex-shrink: 0;
+}
+
+.m-ListIcon-Single__icon {
+    width: 24px;
+}
+
+.m-ListIcon-Single__label {
+    padding: 16px 0 0 16px;
+    font-size: 15px;
+    font-weight: $font-weight-medium;
+    line-height: 22px;
+    color: $marine-blue;
+}

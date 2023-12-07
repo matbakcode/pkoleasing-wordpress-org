@@ -1,0 +1,38 @@
+// GILROY FONT FAMILY
+
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('../assets/fonts/Gilroy-SemiBold/font.woff2') format('woff2'), url('../assets/fonts/Gilroy-SemiBold/font.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../assets/fonts/Gilroy-Medium/font.woff2') format('woff2'), url('../assets/fonts/Gilroy-Medium/font.woff') format('woff');
+}
+
+// UWAGA, Z POWODU BRAKU PEŁNEJ RODZINY FONTU GILROY ROBOCZO JEST ON CZĘŚCIOWO PODMIENIONY PRZEZ FONT LATO!!!
+
+@mixin main-400 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+@mixin main-500 {
+    font-family: 'Gilroy-Medium', sans-serif;
+    //font-weight: 500; // POWODOWAŁO BUGI NA FIREFOXIE
+}
+
+@mixin main-600 {
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    //font-weight: 600; // POWODOWAŁO BUGI NA FIREFOXIE
+}
+
+@mixin main-bold {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+@mixin main-black {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}

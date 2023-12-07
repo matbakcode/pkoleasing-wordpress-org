@@ -1,0 +1,17 @@
+{% extends "layouts/base/base.layout.twig" %}
+
+{% block content %}
+    <div class="p-Blog">
+        <div class="container">
+            {% for post in posts %}
+               {{ post.title }}
+            {% endfor %}
+
+{#            {% include "modules/Pagination/Pagination.module.twig" with {#}
+{#                pagination: posts.pagination#}
+{#            } %}#}
+
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+.b-Hero {
+    padding: 24px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 64px 0 32px;
+    }
+}
+
+.b-Hero__column {
+
+}
+
+.b-Hero__column--first {
+
+}
+
+.b-Hero__column--second {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+}
+
+.b-Hero__title {
+    color: $marine-blue;
+}
+
+.b-Hero__content {
+}
+
+.b-Hero__button {
+    display: none;
+    margin: 48px 0 0 0;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+
+}
+
+.b-Hero__picture {
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 200px;
+
+    @include media-breakpoint-up(lg) {
+        height: 400px;
+    }
+}

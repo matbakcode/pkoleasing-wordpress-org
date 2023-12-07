@@ -1,0 +1,16 @@
+.breadcrumbs {
+  list-style: none;
+  margin: 15px 0;
+  padding: 0;
+  display: flex;
+.breadcrumbs__item {
+  margin: 0 10px;
+  .breadcrumbs__item__link {
+    color: $grayfont;
+    display: block;
+    padding: 10px 5px;
+    @include lato-normal;
+    font-size: .9rem;
+  }
+}
+};

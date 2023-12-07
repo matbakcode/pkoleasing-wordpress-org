@@ -1,0 +1,258 @@
+.login {
+  display: none;
+  width: 1000px;
+  background-color: $marine-blue;
+  position: fixed;
+  top: 20%;
+  left: calc(50% - 500px);
+  z-index: 6;
+  border-radius: 8px;
+  box-shadow: 0 40px 64px 0 rgba(34, 116, 102, 0.08); // moja inwencja, nie ma tego w dostarczonym projekcie
+  
+  @media screen and (max-width: 1020px) {
+    width: 500px;
+    left: calc(50% - 250px);
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &--active {
+    display: flex;
+  }
+
+  &_mainContainer {
+    width: 50%;
+    background-color: $white;
+    border-radius: 8px;
+
+    @media screen and (max-width: 1020px) {
+      width: 100%;
+    }
+  }
+
+  &_sideContainer {
+    width: 50%;
+    background-color: $marine-blue;
+    border-radius: 8px;
+    padding: 100px 48px 48px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1020px) {
+      display: none;
+    }
+  }
+
+  &_tabsWrapper {
+    padding: 0 48px;
+    border-bottom: 1px solid $pale-grey;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &_tab {
+    @include main-600;
+    font-size: 17px;
+    line-height: 1.41;
+    text-align: center;
+    color: #828599;
+    text-decoration: none;
+    padding: 24px 0;
+    width: 50%;
+    margin-bottom: -1px;
+
+    &--active, &:hover {
+      color: $marine-blue;
+      border-bottom: 1px solid $topaz;
+    }
+  }
+
+  &_formContainer {
+    padding: 24px 48px 48px;
+  }
+
+  &_formHeader {
+    @include main-600;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $marine-blue;
+    margin-bottom: 24px;
+  }
+
+  &_additionalInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_link {
+    @include main-500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $topaz;
+  }
+
+  &_button {
+    @include main-600;
+    font-size: 15px;
+    line-height: 1.47;
+    color: $white;
+    border-radius: 28px;
+    background-color: $topaz;
+    padding: 17px 32px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    margin-bottom: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 360px) {
+      max-width: inherit;
+    }
+
+    &:disabled {
+      background-color: #e9e9f0;
+      //color: #828599;
+      color: rgba(130, 133, 153, 0.5);
+      cursor: not-allowed;
+    }
+
+    &--register {
+      margin-bottom: 32px;
+    }
+
+    &--registerPage {
+      max-width: 178px;
+      margin-top: 22px;
+      margin-bottom: 0;
+
+      @media screen and (max-width: 360px) {
+        max-width: inherit;
+      }
+    }
+  }
+
+  &_fancyHeader {
+    @include main-600;
+    font-size: 10px;
+    //font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 3px;
+    color: #828599;
+    text-transform: uppercase;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 24px;
+
+    &:before,
+    &:after {
+      content: '';
+      border-top: #e9e9f0 1px solid;
+      margin: 0 8px 0 0;
+      flex: 1 0 8px;
+    }
+
+    &:after {
+      margin: 0 0 0 8px;
+    }
+  }
+
+  &_socialLinksWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_socialLink {
+    border-radius: 24px;
+    border: solid 1px $light-periwinkle;
+    background-color: $white;
+    @include main-500;
+    font-size: 15px;
+    line-height: 1.47;
+    text-align: center;
+    color: $marine-blue;
+    box-sizing: border-box;
+    padding: 13px;
+    width: 100%;
+    max-width: 198px;
+    text-decoration: none;
+  }
+
+  &_close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  &_sideImg {
+    margin-bottom: 35px;
+  }
+
+  &_sideHeader {
+    @include main-600;
+    font-size: 28px;
+    line-height: 1.29;
+    color: $white;
+    margin-bottom: 16px;
+    max-width: 400px;
+  }
+
+  &_sideText {
+    opacity: 0.72;
+    @include main-500;
+    font-size: 15px;
+    line-height: 1.47;
+    color: $white;
+    margin-bottom: 32px;
+    max-width: 400px;
+  }
+
+  &_listItem {
+    @include main-500;
+    font-size: 15px;
+    line-height: 1.47;
+    color: $white;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url('../assets/images/login/check-circle-action.svg');
+      margin-right: 16px;
+    }
+  }
+
+  &_info {
+    @include main-500;
+    font-size: 12px;
+    line-height: 1.33;
+    text-align: center;
+    color: #828599;
+    max-width: 285px;
+    margin: 0 auto 69px;
+
+    a {
+      color: #828599;
+    }
+  }
+
+  &_form {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}

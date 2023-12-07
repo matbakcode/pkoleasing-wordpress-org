@@ -1,0 +1,25 @@
+.m-Pagination {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+}
+.m-Pagination__link {
+    display: inline-block;
+    padding: rem(10);
+    text-decoration: none;
+
+
+    &.current {
+    }
+
+    .m-Icon {
+        font-size: 80%;
+    }
+}
+a.m-Pagination__link {
+    &:hover {
+        text-decoration: none;
+    }
+}

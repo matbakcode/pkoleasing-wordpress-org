@@ -1,0 +1,39 @@
+<section class="b-Hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+                <div class="b-Hero__column b-Hero__column--first">
+
+                    <div class="b-Hero__lead">
+                        <h6 class="h-text-lead">Finansowanie</h6>
+                    </div>
+
+                    <div class="b-Hero__title">
+                        <h1>Wynajem długoterminowy samochodu</h1>
+                    </div>
+
+                    <div class="b-Hero__content">
+                        <p>Wynajem długoterminowy auta dostępny od ręki. Samochody nowe i używane z gwarancją</p>
+                    </div>
+
+                    <div class="b-Hero__button">
+                        {% include 'modules/Button/Button.module.twig' with {
+                            type: "a",
+                            label: "Dowiedz się więcej",
+                            style: "link",
+                            icon: "arrow-right",
+                            size: "md",
+                            display: "inline-flex",
+                            url: "#",
+                        } %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="b-Hero__column b-Hero__column--second">
+                    <div class="b-Hero__picture" style="background-image: url(/wp-content/uploads/2020/05/iStock-603992138.jpg)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

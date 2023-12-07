@@ -1,0 +1,461 @@
+.cta {
+    width: 100%;
+    padding: 0 16px;
+    margin-left: -16px;
+    background-image: url('../assets/images/cta/hero-image.jpg');
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_apla1 {
+        position: absolute;
+        top: 212px;
+        left: 0;
+        width: 38px;
+        height: 40px;
+        border-radius: 0 20px 20px 0;
+        background-color: rgba(207, 215, 224, 0.3);
+
+        @media screen and (max-width: 1530px) {
+            display: none;
+        }
+    }
+
+    &_apla2 {
+        position: absolute;
+        top: 284px;
+        left: 0;
+        width: 70px;
+        height: 40px;
+        border-radius: 0 20px 20px 0;
+        background-color: rgba(207, 215, 224, 0.3);
+
+        @media screen and (max-width: 1530px) {
+            display: none;
+        }
+    }
+
+    &_apla3 {
+        position: absolute;
+        top: 348px;
+        left: 0;
+        width: 136px;
+        height: 40px;
+        border-radius: 0 20px 20px 0;
+        background-image: linear-gradient(to left, $topaz 0%, rgba(26, 203, 170, 0));
+
+        &:after {
+            content: '';
+            width: 80px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $topaz;
+            float: right;
+        }
+
+        @media screen and (max-width: 1530px) {
+            display: none;
+        }
+    }
+
+    &_container {
+        height: 601px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width: 610px) {
+            height: 352px;
+        }
+    }
+
+    &_mainTextWrapper {
+        margin-top: 24px;
+    }
+
+    &_subheader {
+      @extend %subheader;
+        margin-bottom: 16px;
+    }
+
+    &_header {
+        width: 450px;
+        @include main-600;
+        font-size: 56px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.14;
+        letter-spacing: -0.16px;
+        color: $marine-blue;
+        margin-bottom: 64px;
+
+        span {
+            border-bottom: 4px solid $topaz;
+        }
+
+        @media screen and (max-width: 610px) {
+            width: 230px;
+            font-size: 28px;
+            line-height: 1.29;
+            letter-spacing: -0.08px;
+            margin-bottom: 56px;
+        }
+    }
+
+    &_searchWrapper {
+        border-radius: 49.5px;
+        box-shadow: 0 40px 64px 0 rgba(34, 116, 102, 0.08);
+        background-color: $white;
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        position: relative;
+
+        @media screen and (max-width: 610px) {
+            padding: 12px 0;
+        }
+    }
+
+    &_searchMain {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &_searchDetails {
+        width: 100%;
+        //margin: 20px 30px 0;
+        max-height: 320px;
+        overflow: auto;
+        display: none;
+        padding: 0 32px;
+        box-sizing: border-box;
+
+        background-color: $white;
+        position: absolute;
+        top: 50px;
+        //left: -30px;
+        border-bottom-left-radius: 49.5px;
+        border-bottom-right-radius: 49.5px;
+        box-shadow: 0 40px 64px 0 rgba(34, 116, 102, 0.08);
+
+      @media screen and (max-width: 610px) {
+        top: 35px;
+      }
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &_searchDetailsInnerWrapper {
+        border-top: 1px solid $pale-grey;
+        margin-top: 50px;
+        padding: 24px 0;
+
+      &--mobile {
+        border: 0;
+        margin-top: 0;
+        padding: 24px 16px;
+      }
+    }
+
+    &_searchDetailsListWrapper {
+        padding: 0 30px;
+    }
+
+    &_searchDetailsListItem {
+      &:last-of-type {
+        margin-bottom: 19px;
+      }
+    }
+
+    &_searchDetailsHeader {
+        @include main-bold;
+        font-size: 10px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: 3px;
+        color: #828599;
+        padding: 10px 50px 0 0;
+        border-radius: 8px;
+        margin-bottom: 16px;
+    }
+
+    &_searchDetailListItemLink {
+        @include main-500;
+        font-size: 14px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        color: $marine-blue;
+        display: flex;
+        justify-content: flex-start;
+        text-decoration: none;
+        padding: 5px 50px 5px 0;
+        border-radius: 8px;
+        margin-bottom: 3px;
+
+        &:hover {
+            background-color: #d6ece8;
+        }
+    }
+
+    &_searchDetailListItemLinkImg {
+      margin-left: 8px;
+    }
+
+    &_search {
+        margin-left: 40px;
+        flex-grow: 1;
+        display: flex;
+
+        @media screen and (max-width: 610px) {
+            margin-left: 32px;
+        }
+    }
+
+    &_searchImage {
+        //margin-right: 24px;
+    }
+
+    &_searchInput {
+      &--desktop {
+        display: flex;
+
+        @media screen and (max-width: 680px) {
+          display: none;
+        }
+      }
+
+      &--mobileTrigger {
+        display: none;
+
+        @media screen and (max-width: 680px) {
+          display: flex;
+        }
+      }
+    }
+
+    &_searchInput, &_searchInput::placeholder {
+        @include main-400;
+        font-size: 15px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: normal;
+        color: $steel;
+        border: none;
+        height: 48px;
+        flex-grow: 1;
+        text-indent: 8px;
+        margin: 0 16px;
+
+        @media screen and (max-width: 610px) {
+            height: 36px;
+        }
+    }
+
+    &_searchInput {
+      color: $marine-blue;
+    }
+
+  &_searchInput--mobile {
+    margin: 0 0 0 24px;
+  }
+
+    &_groupWrapper {
+        display: flex;
+    }
+
+    &_button {
+        padding: 16px 32px;
+        border-radius: 28px;
+        background-color: $topaz;
+        @include main-600;
+        font-size: 15px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: 0.16px;
+        color: $white;
+        border: none;
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+
+        img {
+            margin-left: 16px;
+        }
+
+        &--desktop {
+            @media screen and (max-width: 799px) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+            padding: 12px;
+            margin-right: 12px;
+
+            img {
+                margin-left: 0;
+            }
+
+            @media screen and (max-width: 799px) {
+                display: flex;
+            }
+        }
+    }
+
+    &_text {
+        width: 580px;
+        @include main-400;
+        font-size: 15px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: normal;
+        color: #767f8c;
+
+        @media screen and (max-width: 680px) {
+            display: none;
+        }
+    }
+
+    .form-switch {
+        @media screen and (max-width: 680px) {
+            display: none;
+        }
+    }
+
+  &_searchMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 5;
+    //padding: 40px 16px 24px;
+    box-sizing: border-box;
+    background-color: $white;
+
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &_searchMobileHeaderWrapper {
+    padding: 40px 16px 32px;
+    box-sizing: border-box;
+  }
+
+  &_searchMobileHeaderInnerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .form-switch {
+      margin: 0 0 6px 0;
+      @include main-500;
+      font-size: 14px;
+      color: $marine-blue;
+
+      i {
+        margin-right: 10px;
+        width: 32px;
+        height: 24px;
+
+        &::before {
+          width: 32px;
+          height: 24px;
+        }
+
+        &::after {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  &_searchMobileSubheader {
+    @extend %subheader;
+    margin-bottom: 16px;
+  }
+
+  &_searchMobileHeader {
+    width: 224px;
+    @include main-600;
+    font-size: 28px;
+    line-height: 1.29;
+    color: $marine-blue;
+    //margin-bottom: 32px;
+  }
+
+  &_searchMobileInputWrapper {
+    padding: 21px 16px;
+    border: solid $pale-grey;
+    border-width: 1px 0 1px 0;
+    display: flex;
+  }
+
+  &_searchDetailsButtonMobile {
+    border-radius: 28px;
+    background-color: $topaz;
+    @include main-600;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: 0.16px;
+    color: $white;
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 16px 32px;
+    width: 100%;
+    max-width: 328px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    margin-right: 16px;
+
+    img {
+      margin-left: 16px;
+    }
+  }
+
+  &_searchMobileClose {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/images/menu/close-big.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+  }
+}

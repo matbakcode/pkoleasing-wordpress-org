@@ -1,0 +1,35 @@
+.b-BarPoints {
+    padding: 14px 0;
+    background-color: $pale-grey-100;
+    display: none;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+}
+
+.b-BarPoints--b-top {
+    border-top: 1px solid $pale-grey-500;
+}
+
+.b-BarPoints--b-bottom {
+    border-bottom: 1px solid $pale-grey-500;
+}
+
+.b-BarPoints-Point {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.b-BarPoints-Point__icon {
+    width: 16px;
+    margin: 0 16px 0 0;
+}
+
+.b-BarPoints-Point__text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: $font-weight-medium;
+    color: $marine-blue;
+}

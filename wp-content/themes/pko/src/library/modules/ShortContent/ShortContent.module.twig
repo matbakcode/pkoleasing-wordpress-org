@@ -1,0 +1,3 @@
+<div class="m-ShortContent">
+    {{ content|striptags|length > limit ? content|striptags|slice(0, limit) ~ '<span class="m-ShortContent__end">...</span>' : content|striptags  }}
+</div>

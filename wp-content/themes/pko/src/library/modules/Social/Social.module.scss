@@ -1,0 +1,14 @@
+.m-Social {
+    display: flex;
+    margin: auto rem(-20) 0;
+}
+
+.m-Social__link {
+    font-size: rem(30);
+    margin: rem(20);
+
+    &:hover {
+        //
+    }
+
+}

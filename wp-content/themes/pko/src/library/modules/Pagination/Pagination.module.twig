@@ -1,0 +1,23 @@
+<div class="m-Pagination">
+    {% if pagination.prev %}
+        <a href="{{pagination.prev.link}}" class="m-Pagination__link prev {{pagination.prev.link|length ? '' : 'invisible'}}">
+            {% include "modules/Icon/Icon.module.twig" with {
+                icon: "chevron-left"
+            } %}
+        </a>
+    {% endif %}
+        {% for page in pagination.pages %}
+                {% if page.link %}
+                    <a href="{{page.link}}" class="m-Pagination__link {{page.class}}">{{page.title}}</a>
+                {% else %}
+                    <span class="m-Pagination__link {{page.class}}">{{page.title}}</span>
+                {% endif %}
+        {% endfor %}
+    {% if pagination.next %}
+        <a href="{{pagination.next.link}}" class="m-Pagination__link next {{pagination.next.link|length ? '' : 'invisible'}}">
+            {% include "modules/Icon/Icon.module.twig" with {
+                icon: "chevron-right"
+            } %}
+        </a>
+    {% endif %}
+</div>

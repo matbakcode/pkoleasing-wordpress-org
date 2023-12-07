@@ -1,0 +1,1475 @@
+.car-container {
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.carnav-container {
+  box-shadow: inset 0 -1px 0 0 #edeef1;
+  border-top: 1px solid #edeef1;
+  background: $white;
+  position: sticky;
+  top: 80px;
+  z-index: 3;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.carnav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+
+  .carnav__item {
+    border-bottom: 3px solid transparent;
+    margin: 0 10px;
+
+    .carnav__item__link {
+      padding: 18px 20px;
+      display: block;
+      @include main-500;
+      text-decoration: none;
+      color: #828599;
+      font-size: 14px;
+    }
+
+    &--active, &:hover {
+      border-bottom: 3px solid $topaz;
+
+      .carnav__item__link {
+        color: $marine-blue;
+      }
+    }
+
+
+  }
+}
+
+.carcontent {
+  width: 57.75%;
+  @media only screen and (max-width: 768px) {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.carcontent__header {
+  position: relative;
+  margin-top: 23px;
+  @media only screen and (max-width: 768px) {
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .carcontent__back_btn {
+    position: absolute;
+    left: -72px;
+    width: 48px;
+    height: 40px;
+    border-radius: 28px;
+    border: solid 1px $light-periwinkle;
+    background: $white url('../images/oferta/arrow-left-topaz.svg') no-repeat center;
+    cursor: pointer;
+  }
+
+  h1 {
+    @include main-600;
+    font-size: 28px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: left;
+    color: $marine-blue;
+    @media only screen and (max-width: 768px) {
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    span {
+      @include main-500;
+      padding-left: 16px;
+      font-size: 15px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.47;
+      letter-spacing: normal;
+      color: #828599;
+      @media only screen and (max-width: 768px) {
+        display: block;
+        padding-left: 0;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+    }
+  }
+  &__price {
+    display: none;
+    @include main-600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: $marine-blue;
+    @media only screen and (max-width: 768px) {
+      display: block;
+    }
+    span {
+      font-size: 15px;
+      @include main-500;
+    }
+    &__format {
+      @include main-500;
+      font-size: 13px;
+      line-height: 1.38;
+      letter-spacing: normal;
+      color: #828599;
+    }
+  }
+}
+
+.carcontent__smnav {
+  margin: 16px 0 16px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #828599;
+  @include main-500;
+  @media only screen and (max-width: 768px) {
+    order: 3;
+  }
+
+  .carBreadcrumbs {
+    display: flex;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+
+    &__item {
+      margin-right: 8px;
+
+      &__link {
+        color: #828599;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .carSocial {
+    display: flex;
+
+    &__item {
+      &:first-of-type {
+        margin-right: 40px;
+      }
+
+      &__link--share {
+        color: #828599;
+        text-decoration: underline;
+        position: relative;
+        padding-left: 28px;
+
+        &:before {
+          content: url('../images/oferta/share.svg');
+          position: absolute;
+          left: 0;
+          top: 1px;
+        }
+      }
+
+      &__link--favorite {
+        color: #828599;
+        text-decoration: underline;
+        position: relative;
+        padding-left: 28px;
+
+        &:before {
+          content: url('../images/oferta/heart-action.svg');
+          position: absolute;
+          left: 0;
+          top: 1px;
+        }
+      }
+    }
+  }
+}
+.carcontent__gallery {
+  @media only screen and (max-width: 768px) {
+    order: 1;
+  }
+}
+.carcontent__carousel {
+  position: relative;
+  &__promoLabel {
+    @include main-600;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 1;
+    padding: 8px 16px 8px 40px;
+    border-radius: 16px;
+    background-color: #d8d8d8;
+    font-size: 9px;
+    line-height: 1.78;
+    letter-spacing: 2px;
+    color: #01237d;
+    @media only screen and (max-width: 768px) {
+      top: 16px;
+      left: 16px;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border-radius: 16px;
+      font-size: 0;
+    }
+
+    &:before {
+      content: url('../images/oferta/sale-full.svg');
+      position: absolute;
+      left: 16px;
+      top: 8px;
+      @media only screen and (max-width: 768px) {
+        left: 8px;
+      }
+    }
+  }
+  &__navi {
+    position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    width: 56px;
+    height: 48px;
+    opacity: 0.25;
+    border-radius: 28px;
+    border: solid 1px #e7e7ec;
+    cursor: pointer;
+    display: block;
+    z-index: 10;
+
+    &:hover {
+      opacity: 0.5;
+      background-color: $black;
+      border-color: $black;
+    }
+  }
+    &__navi--prev {
+      left: 24px;
+      @media only screen and (max-width: 768px) {
+        left: 16px;
+      }
+      background: url('../images/oferta/arrow-left.svg') center no-repeat;
+    }
+    &__navi--next {
+      right: 24px;
+      @media only screen and (max-width: 768px) {
+        right: 16px;
+      }
+      background: url('../images/oferta/arrow-right.svg') center no-repeat;
+    }
+
+  &__large {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: 436px;
+    @media only screen and (max-width: 768px) {
+      height: auto;
+    }
+
+    img {
+      max-width: 100%;
+
+    }
+
+    &__zoom {
+      position: absolute;
+      cursor: pointer;
+      width: 40px;
+      height: 32px;
+      opacity: 0.5;
+      border-radius: 28px;
+      background: $black url('../images/oferta/expand.svg') center no-repeat;
+      top: 24px;
+      right: 24px;
+      z-index: 1;
+      @media only screen and (max-width: 768px) {
+        top: 16px;
+        right: 16px;
+      }
+    }
+
+
+
+
+    &__count {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      z-index: 1;
+      font-size: 14px;
+      line-height: 1.43;
+      color: $white;
+      @include main-500;
+    }
+  }
+}
+
+.carcontent__carousel__thumb {
+  margin: 8px 0 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
+  .slick-slide {
+    margin-right: 8px;
+    line-height: 0;
+    border: solid 2px transparent;
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+  }
+  .slick-current {
+    border-color: $topaz;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(26, 203, 170, 0.15);
+      z-index: 1;
+    }
+  }
+}
+
+.carcontent__details {
+  @include main-500;
+  @media only screen and (max-width: 768px) {
+    order: 5;
+  }
+
+  &__header__detail {
+    font-size: 20px;
+    line-height: 1.4;
+    color: $marine-blue;
+    padding: 30px 0;
+    @include main-600;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 32px 0;
+    border-bottom: 1px solid #e9e9f0;
+    @media only screen and (max-width: 768px) {
+      padding: 0 0 16px 0
+    }
+
+    &__item {
+      border-radius: 28px;
+      font-size: 15px;
+      line-height: 1.47;
+      color: $marine-blue;
+      padding: 13px 24px 13px 64px;
+      margin-right: 16px;
+      white-space: nowrap;
+      @media only screen and (max-width: 1030px) {
+        margin-bottom: 16px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .rok {
+      background: $ice-blue url('../images/oferta/calendar-blue.svg') 24px center no-repeat;
+    }
+
+    .przebieg {
+      background: $ice-blue url('../images/oferta/metter.svg') 24px center no-repeat;
+    }
+
+    .paliwo {
+      background: $ice-blue url('../images/oferta/fuel.svg') 24px center no-repeat;
+    }
+
+    .skrzynia {
+      background: $ice-blue url('../images/oferta/gear-shift-2.svg') 24px center no-repeat;
+    }
+  }
+
+  &__param {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    border-bottom: 1px solid #e9e9f0;
+    @include main-500;
+    font-size: 15px;
+    line-height: 1.43;
+
+    &__item {
+      width: 33.33%;
+      margin-bottom: 32px;
+      color: $marine-blue;
+      @media only screen and (max-width: 768px) {
+        width: 50%;
+      }
+
+      span {
+        font-size: 14px;
+        display: block;
+        color: #828599;
+      }
+    }
+  }
+
+  &__infolabel {
+    display: flex;
+    border-bottom: 1px solid #e9e9f0;
+    justify-content: center;
+    padding: 32px 0;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    &__item {
+      @include main-500;
+      font-size: 15px;
+      line-height: 1.47;
+      color: $marine-blue;
+      text-align: center;
+      padding: 72px 51px 0 51px;
+      width: 33.33%;
+      @media only screen and (max-width: 768px) {
+        text-align: left;
+        padding: 13px 51px 13px 80px;
+        width: auto;
+        margin-bottom: 32px;
+      }
+    }
+
+    .ksiazka {
+      background: url('../images/oferta/documentation-2.svg') top center no-repeat;
+      @media only screen and (max-width: 768px) {
+        background: url('../images/oferta/documentation-2.svg') center left no-repeat;
+      }
+    }
+
+    .przebieg {
+      background: url('../images/oferta/metter-2.svg') top center no-repeat;
+      @media only screen and (max-width: 768px) {
+        background: url('../images/oferta/metter-2.svg') center left no-repeat;
+      }
+    }
+
+    .certyfiakt {
+      background: url('../images/oferta/quality-badge-2.svg') top center no-repeat;
+      @media only screen and (max-width: 768px) {
+        background: url('../images/oferta/quality-badge-2.svg') center left no-repeat;
+      }
+    }
+  }
+
+  &__header__equipment {
+    @include main-600;
+    padding: 32px 0;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $marine-blue;
+  }
+
+  &__equipment {
+    display: flex;
+    line-height: 1.47;
+    color: $marine-blue;
+    font-size: 15px;
+    @include main-500;
+    position: relative;
+    height: 190px;
+    overflow: hidden;
+    &:after {
+      content: '';
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $white);
+      height: 32px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 33.33%;
+      font-size: 15px;
+      padding: .5rem 0;
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+        font-size: 15px;
+        padding: 0;
+      }
+
+      ul.tab-content {
+        line-height: 1.43;
+        color: #828599;
+        font-size: 14px;
+        max-width: 187px;
+        @media only screen and (max-width: 768px) {
+          line-height: 1.43;
+          color: #828599;
+          font-size: 14px;
+          max-width: 100%;
+          height: 1px;
+          border-bottom: 1px solid #e9e9f0;
+          display: none;
+          transition: all .35s;
+        }
+
+        li {
+          padding: 12px 0;
+        }
+      }
+      & input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+
+        &:checked {
+          + label {
+            @media only screen and (max-width: 768px) {
+              background: url('../images/oferta/chevron-up.svg') center right no-repeat;
+              border-color: transparent;
+            }
+          }
+          ~ .tab-content {
+            display: block;
+            height: auto;
+          }
+        }
+      }
+      & label {
+        display: block;
+        @media only screen and (max-width: 768px) {
+          padding: 17px 0;
+          border-bottom: 1px solid #e9e9f0;
+          position: relative;
+          cursor: pointer;
+          background: url('../images/oferta/chevron-down.svg') center right no-repeat;
+        }
+      }
+
+    }
+    &__more {
+      padding: 32px 0 41px 0;
+      text-align: center;
+      border-bottom: 1px solid #e9e9f0;
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__header__quality {
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: $marine-blue;
+    padding: 32px 0;
+    @include main-600;
+    font-size: 20px;
+  }
+
+  &__quality__summary {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    background-color: #fffbf4;
+    padding: 20px 56px 20px 32px;
+    @media only screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      padding: 20px 32px;
+    }
+
+    &__item {
+      font-size: .9rem;
+
+      &:first-child {
+        position: sticky;
+      }
+
+      &:nth-child(2) {
+        padding-left: 24px;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #9c958c;
+        max-width: 340px;
+        @media only screen and (max-width: 768px) {
+          padding-left: 0;
+          font-size: 14px;
+          order: 3;
+          flex-grow: 2;
+          margin-top: 16px;
+          max-width: 100%;
+        }
+
+        span {
+          display: block;
+          margin-bottom: 8px;
+          font-size: 15px;
+          color: $marine-blue;
+          @media only screen and (max-width: 768px) {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: $marine-blue;
+          }
+        }
+      }
+
+      &:last-child {
+        font-size: 10px;
+        line-height: 1.6;
+        letter-spacing: 3px;
+        color: #d8af55;
+        @include main-600;
+        margin-left: auto;
+        text-align: center;
+
+
+        span {
+          margin-left: auto;
+          white-space: nowrap;
+          font-size: 32px;
+          text-align: center;
+          line-height: 1.25;
+          color: $marine-blue;
+          display: block;
+          margin-top: 10px;
+        }
+      }
+
+      &__medal {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        background: url('../images/oferta/automarket-medal.svg');
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: -8px;
+          top: 8px;
+          width: 40px;
+          height: 20px;
+          opacity: 0.5;
+          background-image: linear-gradient(to left, #f9eccf 100%, rgba(251, 228, 179, 0) 2%);
+          border-radius: 35%;
+          z-index: -1;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 8px;
+          right: -8px;
+          width: 40px;
+          height: 20px;
+          opacity: 0.5;
+          background-image: linear-gradient(to left, #f9eccf 100%, rgba(251, 228, 179, 0) 2%);
+          border-radius: 35%;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  &__quality__tabs {
+    border-radius: 8px;
+    border: solid 1px #e9e9f0;
+    @include main-500;
+
+    &__list {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      @media only screen and (max-width: 768px) {
+       display: flex;
+        flex-direction: column;
+      }
+
+      &__item {
+        padding: 15px 0 15px 73px;
+        border-bottom: 1px solid #e9e9f0;
+        border-right: 1px solid #e9e9f0;
+        background-color: #fafafc;
+        font-size: 14px;
+        line-height: 1.43;
+        color: #828599;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 32px;
+          height: 32px;
+          background: $topaz url('../images/oferta/check-big.svg') center no-repeat;
+          border-radius: 50px;
+          position: absolute;
+          left: 23px;
+          top: 50%;
+          margin-top: -16px;
+        }
+
+        span {
+          display: block;
+          color: $marine-blue;
+          font-size: 15px;
+        }
+
+        &--active {
+          border-color: transparent;
+          background: transparent;
+
+          &:before {
+            background: $very-light-pink url('../images/oferta/exclamation.svg') center no-repeat;
+          }
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &__content {
+      padding: 40px;
+      grid-column-start: 2;
+      grid-row-start: 1;
+      grid-row-end: 7;
+
+      &__intro {
+        line-height: 1.47;
+        font-size: 15px;
+        color: $marine-blue;
+        margin-bottom: 24px;
+      }
+
+      &__list {
+        padding: 0 20px 0 12px;
+
+        &__item {
+          margin-bottom: 24px;
+          position: relative;
+          color: #828599;
+          font-size: 14px;
+          line-height: 1.43;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: -12px;
+            top: 7px;
+            width: 6px;
+            height: 6px;
+            border-radius: 45%;
+            background: $topaz;
+          }
+        }
+      }
+    }
+  }
+
+  &__quality__more {
+    color: $black;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  &__header__history {
+    @include main-600;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: $marine-blue;
+    margin: 32px 0;
+  }
+
+  &__history {
+    padding-left: 36px;
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      left: 13px;
+      top: 26px;
+      bottom: 26px;
+      background: #e9e9f0;
+    }
+    &:after {
+      content: '';
+      height: 48px;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), $white);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    &__item {
+      border-radius: 8px;
+      border: solid 1px #e9e9f0;
+      position: relative;
+      margin-bottom: 24px;
+      padding: 21px 34px;
+      font-size: 15px;
+      line-height: 1.47;
+      letter-spacing: normal;
+      color: $marine-blue;
+      display: flex;
+     &:last-child {
+       margin-bottom: 0;
+     }
+
+
+      span {
+        display: block;
+        position: relative;
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 1.43;
+        color: #828599;
+        margin-right: 30px;
+        &:before {
+          content: '';
+          position: absolute;
+          left: -63px;
+          top: 5px;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: $topaz;
+        }
+      }
+
+      &__title {
+        p {
+          font-size: 14px;
+          line-height: 1.5;
+          color: #828599;
+        }
+      }
+    }
+    &__more {
+      padding: 32px 0 41px 0;
+      text-align: center;
+      border-bottom: 1px solid #e9e9f0;
+    }
+  }
+  .visible {
+    height: max-content;
+    &:after {
+      display: none;
+    }
+  }
+
+  &__links {
+    padding: 25px 0 32px 0;
+    border-bottom: solid 1px #e9e9f0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .carcontent__btn {
+      border: solid 1px $light-periwinkle;
+      border-radius: 28px;
+      padding: 17px 101px 17px 32px;
+      @include main-500;
+      line-height: 1.47;
+      font-size: 15px;
+      color: $marine-blue;
+      position: relative;
+      text-decoration: none;
+      @media only screen and (max-width: 360px) {
+        padding-right: 70px;
+        width: 100%;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 48px;
+        height: 40px;
+        border-radius: 20px;
+        background: $topaz url('../images/oferta/download.svg') center no-repeat;
+      }
+    }
+
+    .btn__report {
+      padding-left: 80px;
+      white-space: nowrap;
+      @media only screen and (max-width: 580px) {
+        margin-bottom: 16px;
+      }
+
+      &:after {
+        content: '';
+        background: url('../images/oferta/documentation.svg');
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 32px;
+        top: 50%;
+        margin-top: -12px;
+      }
+    }
+
+    .btn__dekra {
+      line-height: 0;
+    }
+
+  }
+}
+
+
+.car-package {
+  background: $white;
+  &__switch {
+    border-radius: 8px;
+    border: solid 1px #e9e9f0;
+    margin: 43px 0 10px 0;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px 0 24px;
+    justify-content: space-between;
+  }
+  .clac__tabs {
+    @media only screen and (max-width: 768px) {
+      display: none;
+      position: fixed;
+      background: $white;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+      padding: 0 16px;
+    }
+  }
+}
+
+.carsidebar {
+  width: 40.833%;
+  position: relative;
+  margin-left: 16px;
+  @media only screen and (max-width: 768px) {
+    order: 1;
+    width: 100%;
+    margin-left: 0;
+  }
+  &__dealer {
+    border-radius: 8px;
+    border: solid 1px #e9e9f0;
+    padding: 17px 24px;
+    margin-top: 8px;
+    @include main-500;
+    font-size: 14px;
+    color: #828599;
+
+    span {
+      color: $marine-blue;
+      padding-left: 26px;
+      background: url('../images/oferta/location-blue.svg') center left no-repeat;
+      margin-right: 16px;
+    }
+    &--mobile {
+      display: none;
+      @media only screen and (max-width: 768px) {
+        display: block;
+        order: 4;
+        padding-left: 48px;
+        span {
+          display: block;
+          padding: 2px 0 12px 32px;
+          background-position: left 2px;
+        }
+      }
+    }
+    &--desktop {
+      display: none;
+      @media only screen and (min-width: 768px) {
+        display: block;
+      }
+    }
+  }
+
+  &-user {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 1.5rem 0;
+
+    &-user__item {
+      padding-left: 2rem;
+
+      &-user__item__link {
+        @include main-500;
+        text-decoration: none;
+        color: $black;
+        display: block;
+      }
+    }
+  }
+  #car-view-form {
+    position: sticky;
+    top: 143px;
+    @media only screen and (max-width: 768px) {
+      position: relative;
+      top: auto;
+    }
+  }
+}
+
+.car-package__tab {
+  border-radius: 0 0 8px 8px;
+  border: solid 1px #e9e9f0;
+  border-top: none;
+  padding: 24px;
+  @media only screen and (max-width: 768px) {
+    border-radius: 0;
+    border: none;
+    padding: 0;
+  }
+}
+
+.car-package__tabs {
+  border-radius: 8px 8px 0 0;
+  border: solid 1px #e9e9f0;
+  border-bottom: none;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  @media only screen and (max-width: 768px) {
+    border-radius: 0;
+    border: none;
+    border-bottom: solid 1px #e9e9f0;
+    margin-bottom: 16px;
+}
+
+  .car-package__tabs__item {
+    width: 33.33%;
+    border-right: 1px solid $border;
+    padding: 20px 15px 20px 24px;
+    background: #fafafc;
+    cursor: pointer;
+    text-align: left;
+    color: #828599;
+    position: relative;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      display: none;
+      border-right: none;
+      padding: 15px 0;
+    }
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #e9e9f0;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+
+    &__name {
+      @include main-500;
+      font-size: 10px;
+      display: flex;
+      justify-content: space-between;
+      @media only screen and (max-width: 768px) {
+        font-size: 17px;
+        span {
+          margin: auto;
+        }
+        .infoTooltip {
+          width: 48px;
+          height: 40px;
+          border-radius: 28px;
+          border: solid 1px $light-periwinkle;
+          background: url('../images/oferta/questions.svg') center no-repeat;
+        }
+      }
+    }
+
+    &__price {
+      @include main-600;
+      font-size: 24px;
+      margin: 7px 0 2px 0;
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+
+      span {
+        @include main-500;
+        font-size: 11px;
+      }
+    }
+
+    &__period {
+      @include main-500;
+      font-size: 12px;
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &--active {
+      background: transparent;
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+
+      &::before {
+        background-color: transparent;
+      }
+
+      .car-package__tabs__item {
+        &__name {
+          color: $topaz;
+          @media only screen and (max-width: 768px) {
+            color: $marine-blue;
+            text-align: center;
+            align-items: center;
+          }
+
+        }
+
+        &__price {
+          color: $marine-blue;
+        }
+      }
+    }
+    &--disabled {
+      pointer-events: none;
+    }
+  }
+}
+
+.car-package__tab__content {
+  display: none;
+  @include main-500;
+
+  &--active {
+    display: block;
+  }
+
+  &__payment {
+    font-size: 14px;
+    line-height: 1.43;
+    color: #828599;
+    margin-bottom: 8px;
+    width: 100%;
+
+    span {
+      color: $marine-blue;
+      font-size: 15px;
+    }
+  }
+
+  &__half {
+    @media only screen and (max-width: 1250px) {
+    flex-direction: column;
+      width: 100%;
+
+  }
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+
+
+
+    &__item {
+      width: 50%;
+      @media only screen and (max-width: 1250px) {
+        width: auto;
+      }
+      &:last-child {
+        @media only screen and (max-width: 1250px) {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  &__pakiet {
+    margin-top: 16px;
+
+    &__box {
+      display: flex;
+      @media only screen and (max-width: 1250px) {
+        flex-direction: column;
+      }
+      justify-content: space-between;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: solid 1px #e9e9f0;
+
+      &__item {
+        width: 50%;
+        @media only screen and (max-width: 768px) {
+          width: auto;
+        }
+        @media only screen and (max-width: 1250px) {
+          width: 100%;
+        }
+        border-radius: 8px;
+        border: solid 1px #e9e9f0;
+        padding: 16px 16px 20px 16px;
+
+        &:first-child {
+          margin-right: 8px;
+          @media only screen and (max-width: 1250px) {
+            margin-right: 0;
+            margin-bottom: 8px;
+            width: auto;
+          }
+        }
+        &:last-child {
+          margin-left: 8px;
+          @media only screen and (max-width: 1250px) {
+            margin-left: 0;
+            width: auto;
+          }
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 51px;
+            height: 51px;
+            background: url('../images/oferta/comfort-badge.svg') top right no-repeat;
+          }
+        }
+
+        &__check {
+          display: flex;
+
+          .infoTooltip {
+            margin: 3px 0 0 8px;
+          }
+        }
+      }
+
+      .selected {
+        border-color: $topaz;
+        box-shadow: 0 0 0 2px $ice;
+      }
+
+      &__features {
+        &__item {
+          word-wrap: break-word;
+          font-size: 13px;
+          color: #828599;
+          padding-left: 32px;
+          margin-bottom: 6px;
+          line-height: 1.38;
+        }
+
+        .koord {
+          background: url('../images/oferta/guarantee-check.svg') left 2px no-repeat;
+        }
+
+        .auzast {
+          background: url('../images/oferta/car.svg') left 2px no-repeat;
+        }
+
+        .serwis {
+          background: url('../images/oferta/service.svg') left 2px no-repeat;
+        }
+
+        .opony {
+          background: url('../images/oferta/tire-2.svg') left 2px no-repeat;
+        }
+
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: 768px) {
+      align-items: center;
+    }
+  }
+
+  &__purchase {
+    @media only screen and (max-width: 768px) {
+        order: 2;
+      border-top: solid 1px #e9e9f0;
+      border-bottom: none;
+      margin-top: 24px;
+      padding-top: 24px;
+    }
+    @include main-500;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #828599;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #e9e9f0;
+    padding-bottom: 24px;
+
+    .btn__wnioskuj {
+      width: 216px;
+    }
+  }
+
+  &__loan {
+    @media only screen and (max-width: 768px) {
+      order: 1;
+    }
+    height: 161px;
+    padding: 24px 0 0 80px;
+    @media only screen and (max-width: 1125px) {
+       padding-left: 24px;
+    }
+    background: url('../images/oferta/image-pozyczka.png') right center no-repeat;
+
+    &__txt {
+      @include main-600;
+      font-size: 20px;
+      line-height: 1.4;
+      color: $marine-blue;
+      margin-bottom: 18px;
+    }
+  }
+}
+#zakup {
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.similar__offers {
+  &__header {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #002678;
+    margin: 32px 0;
+  }
+
+  &__content {
+    display: flex;
+  }
+}
+.mobile {
+  display: none;
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+}
+.car-package__mobile__nav {
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+  display: flex;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: solid 1px #e9e9f0;
+  overflow: hidden;
+  &__item {
+    width: 33%;
+    border-bottom: 2px solid transparent;
+    border-right: solid 1px #e9e9f0;
+    font-size: 13px;
+    line-height: 1.38;
+    text-align: center;
+    color: #828599;
+    @include main-500;
+    padding: 19px 0;
+    cursor: pointer;
+    &:last-child {
+      border-right: none;
+    }
+    &--active {
+      color: $marine-blue;
+      border-bottom-color: $topaz;
+    }
+  }
+}
+.desktop {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.mobile__calc__hide {
+  cursor: pointer;
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 100;
+  top: 10px;
+  left: 0;
+  background: url('../images/oferta/left.svg') center no-repeat;
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+}
+.mobile__calc__price {
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+  font-size: 24px;
+  @include main-600;
+  color: $marine-blue;
+  span {
+    font-size: 15px;
+    @include main-500;
+  }
+  &__format {
+    font-size: 13px;
+    @include main-500;
+    color: #828599;
+  }
+}

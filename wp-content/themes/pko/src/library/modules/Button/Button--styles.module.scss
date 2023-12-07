@@ -1,0 +1,55 @@
+@mixin m-Button--link {
+    color: $topaz;
+    font-size: 15px;
+    font-weight: $font-weight-bold;
+    line-height: 24px;
+
+    .m-Button__icon {
+        margin: 0 0 0 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:before {
+            content: '';
+            z-index: 5;
+            width: 24px;
+            height: 24px;
+            background-color: $ice-blue;
+            border-radius: 40px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all $normal-transition;
+        }
+    }
+
+    .m-Icon {
+        font-size: 8px;
+        position: relative;
+        z-index: 10;
+        color: $topaz;
+        transition: color $normal-transition;
+    }
+
+    &:hover {
+        color: $topaz;
+
+        .m-Button__icon {
+            &:before {
+                transform: translate(-50%, -50%) scale(1.4);
+                background-color: $topaz;
+            }
+        }
+        .m-Icon {
+            color: $white;
+        }
+    }
+
+}
+
+.m-Button--link {
+    @include m-Button--link;
+}

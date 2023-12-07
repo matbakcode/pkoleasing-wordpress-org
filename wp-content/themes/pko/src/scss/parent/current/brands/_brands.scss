@@ -1,0 +1,214 @@
+.brands {
+    max-width: 1200px;
+    margin: 0 auto 160px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1120px) {
+        margin-bottom: 57px;
+    }
+
+  @media screen and (max-width: 610px) {
+    margin-bottom: 26px;
+  }
+
+    &_headerWrapper {
+        text-align: center;
+        flex-basis: 100%;
+    }
+
+    &_subheader {
+      @extend %subheader;
+        margin-bottom: 16px;
+    }
+
+    &_header {
+        @include main-600;
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: -0.16px;
+        color: $marine-blue;
+        margin-bottom: 56px;
+
+        @media screen and (max-width: 1120px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 610px) {
+            font-size: 28px;
+            line-height: 1.14;
+            letter-spacing: -0.11px;
+        }
+    }
+
+    &_logosWrapper {
+        display: flex !important;
+        //flex-basis: 100%;
+      width: 100%;
+        flex-wrap: wrap;
+
+      @media screen and (min-width: 611px) {
+        &--desktop {
+          display: flex !important;
+        }
+
+        &--mobile {
+          display: none !important;
+        }
+      }
+
+      @media screen and (max-width: 610px) {
+        display: none !important;
+
+        &:first-of-type {
+          display: flex !important;
+        }
+
+        &--desktop {
+          display: none !important;
+        }
+
+        &--mobile {
+          display: flex !important;
+        }
+      }
+    }
+
+    &_logo {
+        width: 12.5%;
+        height: 150px;
+        border: solid #eaf1f1;
+        border-width: 1px 0 0 1px;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 1120px) {
+            height: 104px;
+            //padding: 24px;
+        }
+
+        @media (max-width: 850px) {
+            width: 25%;
+        }
+
+        @media (max-width: 650px) {
+            width: 33%;
+        }
+
+        &:first-of-type {
+            border-top-left-radius: 12px;
+        }
+
+        &:nth-of-type(3) {
+            @media screen and (max-width: 650px) {
+                border-top-right-radius: 12px;
+            }
+        }
+
+        &:nth-of-type(n+3) {
+            @media screen and (max-width: 650px) {
+                border-right: 1px solid #eaf1f1;
+            }
+        }
+
+        &:nth-of-type(4) {
+            @media screen and (min-width: 651px) and (max-width: 850px) {
+                border-top-right-radius: 12px;
+                border-right: 1px solid #eaf1f1;
+            }
+        }
+
+        &:nth-of-type(8) {
+            border-right: 1px solid #eaf1f1;
+
+            @media screen and (min-width: 851px) {
+                border-top-right-radius: 12px;
+            }
+        }
+
+        &:nth-of-type(9) {
+            @media screen and (min-width: 851px) {
+                border-bottom-left-radius: 12px;
+            }
+        }
+
+        &:nth-of-type(12) {
+            @media screen and (max-width: 850px) {
+                border-right: 1px solid #eaf1f1;
+            }
+        }
+
+        &:nth-of-type(13) {
+            @media screen and (min-width: 651px) and (max-width: 850px) {
+                border-bottom-left-radius: 12px;
+            }
+        }
+
+        &:nth-of-type(n+9) {
+            border-bottom: 1px solid #eaf1f1;
+        }
+
+        &:last-of-type {
+            border-right: 1px solid #eaf1f1;
+            border-bottom-right-radius: 12px;
+        }
+
+      @media screen and (max-width: 610px) {
+        &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7), &:nth-of-type(8) {
+          border-bottom: 1px solid #eaf1f1;
+        }
+      }
+    }
+
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    left: calc(50% - 42px);
+    //bottom: 24px;
+    bottom: 8px;
+
+    li {
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &.slick-active {
+        .features_galleryPaginationItem {
+          background-color: $topaz;
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    left: calc(50% - 10px);
+    bottom: -20px;
+
+    li {
+      margin-right: 8px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &.slick-active {
+        .brands_paginationItem {
+          background-color: $topaz;
+        }
+      }
+    }
+  }
+
+  &_paginationItem {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $light-sky-blue;
+  }
+}

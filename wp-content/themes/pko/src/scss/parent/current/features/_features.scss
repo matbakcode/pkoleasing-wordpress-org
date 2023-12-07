@@ -1,0 +1,315 @@
+.features {
+    max-width: 1200px;
+    margin: 0 auto 152px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1120px) {
+        align-items: center;
+        margin-bottom: 68px;
+    }
+
+    @media screen and (max-width: 939px) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &--moreSpace {
+        margin-bottom: 216px;
+
+        @media screen and (max-width: 1120px) {
+            margin-bottom: 56px;
+        }
+    }
+
+    &_columnImage {
+        position: relative;
+        //max-height: 538px;
+
+        @media screen and (max-width: 939px) {
+            margin-bottom: 44px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &_apla1 {
+        position: absolute;
+        top: -17px;
+        left: 32px;
+        width: 128px;
+        height: 32px;
+        border-radius: 16px;
+        background-image: linear-gradient(to right, rgba(237, 238, 241, 0) 0%, $pale-grey 98%);
+
+        &:after {
+            content: '';
+            width: 64px;
+            height: 32px;
+            border-radius: 16px;
+            background-color: $pale-grey;
+            float: right;
+        }
+    }
+
+    &_apla2 {
+        position: absolute;
+        right: 32px;
+        bottom: -17px;
+        width: 128px;
+        height: 32px;
+        border-radius: 16px;
+        background-image: linear-gradient(to left, $topaz 0%, rgba(26, 203, 170, 0));
+
+        &:after {
+            content: '';
+            width: 64px;
+            height: 32px;
+            border-radius: 16px;
+            background-color: $topaz;
+            float: right;
+        }
+    }
+
+    &_galleryPagination {
+        display: none;
+        position: absolute;
+        left: calc(50% - 38px);
+        bottom: 24px;
+
+        @media (max-width: 610px) {
+            display: flex;
+        }
+    }
+
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    left: calc(50% - 42px);
+    //bottom: 24px;
+    bottom: 8px;
+
+    li {
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &.slick-active {
+        .features_galleryPaginationItem {
+          background-color: $topaz;
+        }
+      }
+    }
+  }
+
+  #features_slickGallery-2 {
+    .slick-dots {
+      left: calc(50% - 28px);
+    }
+  }
+
+    &_galleryPaginationItem {
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $light-sky-blue;
+        margin-right: 8px;
+
+        //&:last-of-type {
+        //    margin-right: 0;
+        //}
+    }
+
+    &_galleryPaginationDot {
+        &--active {
+            background-color: $topaz;
+        }
+    }
+
+    &_columnText {
+        display: flex;
+        max-width: 590px;
+        align-content: baseline;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 939px) {
+            justify-content: center;
+        }
+
+        @media (max-width: 610px) {
+            max-width: 100%;
+        }
+
+        &--right {
+            padding-left: 16px;
+
+            @media screen and (max-width: 939px) {
+                padding-left: 0;
+            }
+        }
+
+        &--left {
+            padding-right: 16px;
+
+            @media screen and (max-width: 939px) {
+                padding-right: 0;
+                order: 1;
+            }
+        }
+    }
+
+    &_headerWrapper {
+        max-width: 100%;
+        padding-top: 17px;
+
+        @media screen and (max-width: 1120px) {
+            padding-top: 0;
+        }
+    }
+
+    &_subheader {
+      @extend %subheader;
+        width: 109px;
+        max-width: 100%;
+        margin-bottom: 16px;
+
+        @media screen and (max-width: 939px) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &_header {
+        width: 490px;
+        max-width: 100%;
+        @include main-600;
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: -0.16px;
+        color: $marine-blue;
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 939px) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 610px) {
+            font-size: 28px;
+            line-height: 1.14;
+            letter-spacing: -0.11px;
+        }
+    }
+
+    &_text {
+        width: 446px;
+        max-width: 100%;
+        @include main-500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #80869b;
+        margin-bottom: 32px;
+    }
+
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+      //max-height: 118px; // alternatywny dla ukrywania wszystkich listItemów prócz &:first-of-type sposób na zapobieganiu skakaniu contenct przed wczytaniem sliderów
+    }
+
+    &_listItem {
+        display: flex !important;
+        align-items: center;
+        margin-bottom: 24px;
+
+        &:nth-of-type(odd) {
+            margin-right: 40px;
+
+            @media screen and (max-width: 610px) {
+                margin-right: 0px;
+            }
+        }
+
+        @media screen and (min-width: 611px) and (max-width: 939px) {
+            text-align: left;
+        }
+
+        @media screen and (max-width: 610px) {
+            flex-direction: column;
+            margin-bottom: 32px;
+          //margin: 0 80px 32px;
+          display: none !important;
+
+          &:first-of-type {
+            display: flex !important;
+          }
+        }
+    }
+
+  .slick-slide {
+    opacity: 0.5;
+
+    &.slick-current {
+      opacity: 1;
+    }
+  }
+
+    &_listImgWrapper {
+        display: flex;
+        justify-content: center;
+        width: 56px;
+        height: 48px;
+        border-radius: 28px;
+        border: solid 1px $pale-grey;
+        margin-right: 16px;
+        position: relative;
+
+        @media screen and (max-width: 610px) {
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
+    }
+
+    &_listImg {
+        z-index: 1;
+        align-self: center;
+    }
+
+    &_listText {
+        width: 192px;
+        height: 28px;
+        @include main-500;
+        font-size: 15px;
+        line-height: 1.87;
+        letter-spacing: -0.17px;
+        color: $marine-blue;
+    }
+
+    &_link {
+        border-radius: 28px;
+        background-color: $topaz;
+        @include main-600;
+        font-size: 15px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: 0.16px;
+        color: $white;
+        border: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 16px 32px;
+
+        img {
+            margin-left: 16px;
+        }
+    }
+}

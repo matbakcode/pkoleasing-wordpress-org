@@ -1,0 +1,119 @@
+.promoOffers {
+    max-width: 1200px;
+    margin: 0 auto 156px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1120px) {
+      margin-bottom: 56px;
+    }
+
+    @media screen and (max-width: 610px) {
+      justify-content: center;
+    }
+
+    &_headerWrapper {
+        flex-basis: 100%;
+    }
+
+    &_subheader {
+      @extend %subheader;
+        margin-bottom: 16px;
+    }
+
+    &_header {
+        @include main-600;
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: -0.16px;
+        color: $marine-blue;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 610px) {
+          font-size: 28px;
+          line-height: 1.14;
+          letter-spacing: -0.11px;
+          margin-bottom: 32px;
+        }
+    }
+
+    &_box {
+        max-width: 286px;
+        width: calc(25% - 16px);
+        //height: 420px;
+        border-radius: 16px;
+        box-shadow: 0 24px 88px 4px rgba(37, 39, 42, 0.04);
+        padding: 32px;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 1120px) {
+          width: calc(50% - 18px);
+          max-width: inherit;
+        }
+
+        @media screen and (max-width: 610px) {
+          display: none;
+          width: 290px !important;
+          height: 422px;
+          margin-right: 16px;
+          margin-bottom: 55px;
+        }
+    }
+
+    &_boxSubheader {
+        @include main-bold;
+        font-size: 10px;
+        line-height: 1.6;
+        letter-spacing: 3px;
+        color: $topaz;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        display: inline-block;
+    }
+
+    &_boxTitle {
+        @include main-600;
+        font-size: 20px;
+        line-height: 1.6;
+        letter-spacing: -0.16px;
+        color: #002578;
+        margin-bottom: 16px;
+    }
+
+    &_boxImg {
+        //max-width: 100%;
+        //height: auto;
+        margin-bottom: 24px;
+    }
+
+    &_boxText {
+        @include main-500;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #828599;
+        margin-bottom: 40px;
+    }
+
+    &_link {
+        border-radius: 28px;
+        background-color: $topaz;
+        @include main-600;
+        font-size: 15px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: 0.16px;
+        color: $white;
+        border: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 16px 32px;
+
+        img {
+            margin-left: 16px;
+        }
+    }
+}

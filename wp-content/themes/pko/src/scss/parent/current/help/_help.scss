@@ -1,0 +1,250 @@
+.help {
+    padding: 102px 0;
+    margin: 0 auto;
+    display: flex;
+    //background-image: linear-gradient(to left, #fafafc 98%, rgba(250, 250, 252, 0)); oryginalne wartości dla diva o szerokości mniejszej niż cały ekran
+    background-image: linear-gradient(to left, #fafafc 60%, rgba(250, 250, 252, 0));
+
+    @media screen and (max-width: 1120px) {
+        padding: 57px 0 34px;
+    }
+
+    @media screen and (max-width: 1023px) {
+        background-image: linear-gradient(to top, #fafafc 60%, rgba(250, 250, 252, 0));
+    }
+
+    &_headerWrapper {
+        text-align: left;
+        //flex-basis: 360px;
+        //width: calc(33% - 8px); // zmienione na 31 aby tekst się właściwie w nagłówku załamywał
+        width: calc(31% - 8px);
+
+        @media screen and (max-width: 1023px) {
+            width: 580px;
+            text-align: center;
+            margin-bottom: 36px; // wymyślone przeze mnie
+        }
+
+        @media screen and (max-width: 689px) {
+            width: 100%;
+          margin-bottom: 18px;
+        }
+    }
+
+    &_subheader {
+      @extend %subheader;
+        margin-bottom: 16px;
+        display: block;
+
+        @media screen and (max-width: 1120px) {
+            margin-bottom: 9px;
+        }
+    }
+
+    &_header {
+        @include main-600;
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: -0.16px;
+        color: $marine-blue;
+        margin-bottom: 24px;
+
+        @media screen and (max-width: 610px) {
+          font-size: 28px;
+          line-height: 1.14;
+          letter-spacing: -0.11px;
+          margin-bottom: 17px;
+        }
+    }
+
+    &_text {
+        @include main-500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #828599;
+    }
+
+    &_headerLink {
+        color: $topaz;
+    }
+
+    &_infoWrapper {
+        //border-radius: 16px;
+        //background-image: linear-gradient(to left, #fafafc 98%, rgba(250, 250, 252, 0));
+        //display: flex;
+        max-width: 1200px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1023px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &_info {
+        position: relative;
+        display: flex;
+        box-shadow: 0 16px 88px 4px rgba(37, 39, 42, 0.04);
+        width: calc(58% - 8px);
+
+        > a:first-of-type {
+            border-radius: 16px 0 0 16px;
+        }
+
+        > a:last-of-type {
+            border-radius: 0 16px 16px 0;
+        }
+
+        @media screen and (max-width: 1023px) {
+            width: auto;
+        }
+
+        @media screen and (max-width: 689px) {
+            flex-wrap: wrap;
+            width: 100%;
+
+            > a:first-of-type {
+                border-radius: 16px 16px 0 0;
+            }
+
+            > a:last-of-type {
+                border-radius: 0 0 16px 16px;
+            }
+        }
+    }
+
+    &_apla1 {
+      position: absolute;
+      top: -12px;
+      left: 40px;
+      width: 96px;
+      height: 24px;
+      background-image: url("../assets/images/help-section/pattern-gray-small.svg");
+      background-repeat: no-repeat;
+
+      @media screen and (max-width: 689px) {
+          display: none;
+      }
+    }
+
+    &_apla2 {
+      position: absolute;
+      right: 40px;
+      bottom: -12px;
+      width: 96px;
+      height: 24px;
+      background-image: url("../assets/images/help-section/pattern-gray-small.svg");
+      background-repeat: no-repeat;
+
+      @media screen and (max-width: 689px) {
+          display: none;
+      }
+    }
+
+    &_conjunction {
+        position: absolute;
+        width: 48px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: $white;
+        top: calc(50% - 20px);
+        left: calc(50% - 24px);
+        @include main-bold;
+        font-size: 10px;
+        line-height: 1.6;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: $marine-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 689px) {
+            top: 50%;
+        }
+    }
+
+    &_link {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+        @media screen and (max-width: 1023px) {
+          padding: 24px 0;
+          width: 320px;
+        }
+
+        @media screen and (max-width: 689px) {
+            width: 100%;
+            padding: 36px 0;
+            flex-direction: column;
+
+          &:first-of-type {
+            padding-top: 20px;
+          }
+        }
+
+        &:hover {
+            background-image: url('../assets/images/help-section/pattern-blob.svg');
+        }
+    }
+
+    &_img {
+        margin-right: 33px;
+
+        @media screen and (max-width: 689px) {
+            margin-right: 0;
+            margin-bottom: 18px;
+        }
+    }
+
+    &_telWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width: 689px) {
+            align-items: center;
+        }
+    }
+
+    &_telHeader {
+        @include main-500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $marine-blue;
+
+        @media screen and (max-width: 689px) {
+            margin-bottom: 9px;
+        }
+    }
+
+    &_telNumber {
+        @include main-600;
+        font-size: 28px;
+        line-height: 1.29;
+        color: $topaz;
+    }
+
+    &_linkButton {
+        border-radius: 28px;
+        background-color: $topaz;
+        @include main-600;
+        font-size: 15px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.47;
+        color: $white;
+        border: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 16px 32px;
+    }
+}

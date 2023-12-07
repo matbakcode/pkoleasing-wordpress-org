@@ -1,0 +1,6 @@
+{
+    "require": {
+        "timber/timber": "^1.15",
+        "nette/robot-loader": "^3.2"
+    }
+}

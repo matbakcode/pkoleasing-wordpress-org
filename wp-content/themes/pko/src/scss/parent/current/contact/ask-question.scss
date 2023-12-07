@@ -1,0 +1,214 @@
+.ask-question {
+  display: flex;
+  justify-content: space-between;
+  &__continer {
+    width: 591px;
+    h1 {
+      @include main-600;
+      font-size: 28px;
+      line-height: 1.29;
+      color: $marine-blue;
+      margin: 40px 0 16px 0;
+    }
+
+    form {
+      margin-bottom: 40px;
+      .input-group {
+        .formSelect {
+          min-width: 93px;
+          margin-right: 8px;
+          select {
+            height: 50px;
+          }
+        }
+        input {
+          width: auto !important;
+        }
+      }
+    }
+  }
+  &__info {
+    font-size: 14px;
+    @include main-500;
+    line-height: 1.43;
+    color: #828599;
+    margin-bottom: 32px;
+  }
+  &__sidebar {
+    width: 490px;
+    &__header {
+      @include main-500;
+      font-size: 15px;
+      line-height: 1.47;
+      color: $marine-blue;
+      border-radius: 8px;
+      border: solid 1px #e9e9f0;
+      padding: 17px 0 17px 72px;
+      margin-top: 40px;
+      background: $white url('../icons/24/Rent/Rent-active.svg') 24px center no-repeat;
+    }
+    &__offer {
+      border-radius: 8px;
+      border: solid 1px #e9e9f0;
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 24px;
+      align-items: flex-start;
+      &__photo {
+        width: 108px;
+        height: 88px;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-left: 24px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__detail {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24px;
+        max-width: 246px;
+        .car_name {
+          @include main-600;
+          font-size: 20px;
+          line-height: 1.4;
+          color: $marine-blue;
+          margin-bottom: 8px;
+          span {
+            margin-left: 16px;
+            font-size: 13px;
+            line-height: 1.38;
+            letter-spacing: 1px;
+            color: #335193;
+          }
+        }
+        .car_model {
+          @include main-500;
+          font-size: 13px;
+          line-height: 1.38;
+          color: #828599;
+          margin-bottom: 8px;
+        }
+        .car_param {
+          @include main-500;
+          font-size: 13px;
+          line-height: 1.38;
+          color: #828599;
+          i {
+            display: inline-block;
+            width: 3px;
+            height: 100%;
+            position: relative;
+            margin: 0 8px;
+            &:before {
+              content: '';
+              position: absolute;
+              bottom: 3px;
+              width: 3px;
+              height: 3px;
+              border-radius: 50%;
+              opacity: 0.75;
+              background-color: #c0c2cf;
+            }
+          }
+        }
+
+      }
+      &__price {
+        width: 100%;
+        display: flex;
+        border-top: solid 1px #e9e9f0;
+        padding: 16px 24px 22px 24px;
+        margin-top: 24px;
+        justify-content: space-between;
+        align-items: end;
+        .price-label {
+          @include main-500;
+          font-size: 15px;
+          line-height: 1.47;
+          color: $marine-blue;
+        }
+        .price-val {
+          @include main-600;
+          font-size: 24px;
+          line-height: 1.33;
+          color: $marine-blue;
+          span {
+            @include main-500;
+            font-size: 15px;
+            line-height: 1.47;
+            color: $marine-blue;
+          }
+        }
+      }
+      .badge {
+        margin: 0 24px 0 auto;
+      }
+    }
+    &__contact {
+      border-radius: 8px;
+      border: solid 1px #e9e9f0;
+      margin-top: 8px;
+      &__header {
+        padding: 24px 0 16px 24px;
+        @include main-500;
+        font-size: 17px;
+        line-height: 1.41;
+        color: $marine-blue;
+      }
+      &__txt {
+        padding-left: 24px;
+        padding-right: 75px;
+        @include main-500;
+        font-size: 14px;
+        line-height: 1.43;
+        color: #828599;
+      }
+      &__dealer {
+        margin-top: 24px;
+        border-top: 1px solid #e9e9f0;
+        background-color: #fafafc;
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 0 0 8px 8px;
+        .dealer-info {
+          display: flex;
+          flex-direction: column;
+          .dealer-name {
+            padding-left: 31px;
+            @include lato-normal;
+            line-height: 1.47;
+            letter-spacing: normal;
+            color: $marine-blue;
+            margin-bottom: 4px;
+            background: url('../icons/16/Location/Location-blue.svg') left center no-repeat;
+          }
+          .dealer-address {
+            padding-left: 31px;
+            @include main-500;
+            font-size: 14px;
+            line-height: 1.43;
+            color: #828599;
+          }
+        }
+      }
+    }
+  }
+  &__approval {
+    &__list {
+      margin-left: 35px;
+      padding-top: 10px;
+      margin-bottom: 10px;
+      .label {
+        margin-bottom: 18px;
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<div class="m-Card">
+
+    <div class="m-Card__inner">
+        <div class="m-Card__icon">
+            {% include "modules/Icon/Icon.module.twig" with {
+                icon: "check"
+            } %}
+        </div>
+
+
+        <div class="m-Card__title">
+            <h5>{{ title }}</h5>
+        </div>
+
+        <div class="m-Card__content">
+            <p>{{ content }}</p>
+        </div>
+    </div>
+
+    <div class="m-Card__bg">
+        {% include "modules/Icon/Icon.module.twig" with {
+            icon: "check"
+        } %}
+    </div>
+
+</div>

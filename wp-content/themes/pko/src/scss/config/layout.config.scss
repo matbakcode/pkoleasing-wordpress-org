@@ -1,0 +1,12 @@
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+        sm: 768px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1240px
+);
+
+$grid-columns:                12;
+$grid-gutter-width:           32px;
+$grid-margin-width:           $grid-gutter-width / 2;

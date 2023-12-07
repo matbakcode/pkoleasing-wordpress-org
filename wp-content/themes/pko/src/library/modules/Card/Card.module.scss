@@ -1,0 +1,43 @@
+.m-Card {
+    background-color: $marine-blue;
+    border-radius: $border-radius;
+    padding: 40px;
+    position: relative;
+}
+
+.m-Card__inner {
+    position: relative;
+    z-index: 10;
+}
+
+.m-Card__icon {
+    color: $topaz;
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+.m-Card__title {
+    color: $white;
+    margin: 0 0 8px;
+}
+
+.m-Card__content {
+    opacity: 60%;
+
+
+    p {
+        color: $white;
+        font-weight: $font-weight-normal;
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
+
+.m-Card__bg {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    opacity: 4%;
+    font-size: 100px;
+    color: $white;
+}

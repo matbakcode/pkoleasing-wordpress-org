@@ -1,0 +1,32 @@
+.b-Half {
+    @include media-breakpoint-up(md) {
+        padding: 24px 0;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: 75px 0;
+    }
+}
+
+.b-Half__column {
+    @include media-breakpoint-up(md) {
+
+    }
+}
+.b-Half__title {
+    color: $marine-blue;
+}
+.b-Half__image {
+    margin: 24px 0;
+
+    @include media-breakpoint-up(md) {
+        margin: 0;
+    }
+}
+.b-Half__content {
+    padding: 24px 0;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        text-align: left;
+    }
+}

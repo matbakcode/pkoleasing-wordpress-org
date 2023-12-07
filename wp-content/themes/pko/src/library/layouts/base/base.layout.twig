@@ -1,0 +1,21 @@
+<html>
+{% block head %}
+    {% include 'partials/head.twig' %}
+{% endblock %}
+
+
+<body class="pko_wp {{body_class}}" data-template="base.twig">
+    <main class="l-Base">
+
+        {% include 'partials/header.twig' %}
+
+        {% block content %}
+        {% endblock %}
+
+
+        {% include 'partials/footer.twig' %}
+
+        {{ function('wp_footer') }}
+    </main>
+</body>
+</html>
